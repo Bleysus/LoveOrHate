@@ -10,8 +10,8 @@ import UIKit
 
 class ItemsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var itemPersonImage: UIImageView!
-    
+      
+    @IBOutlet weak var itemPerson: UIButton!
     @IBOutlet weak var itemView: UIView!
     @IBOutlet weak var itemTextLabel: UILabel!
     @IBOutlet weak var itemHeartImage: UIImageView!
@@ -28,6 +28,11 @@ class ItemsTableViewCell: UITableViewCell {
 
 
         // Configure the view for the selected state
+    }
+    @IBAction func selectPersonPressed(_ sender: UIButton) {
+        itemTextLabel.text = "Yes!"
+       
+        
     }
     
 }

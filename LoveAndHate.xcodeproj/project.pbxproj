@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F10F33CD23859E1400B1E7F7 /* LoveChangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */; };
 		F1DCB68A23843EB500E53C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB68923843EB500E53C36 /* AppDelegate.swift */; };
 		F1DCB68C23843EB500E53C36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */; };
 		F1DCB69123843EB500E53C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1DCB68F23843EB500E53C36 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveChangerViewController.swift; sourceTree = "<group>"; };
 		F1DCB68623843EB500E53C36 /* LoveAndHate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveAndHate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1DCB68923843EB500E53C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				F1DCB6A023843F5C00E53C36 /* ItemsTableViewController.swift */,
 				F1DCB6A6238449BA00E53C36 /* ItemsTableViewCell.swift */,
 				F1DCB6A7238449BA00E53C36 /* ItemsTableViewCell.xib */,
+				F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				F1DCB68A23843EB500E53C36 /* AppDelegate.swift in Sources */,
 				F1DCB68C23843EB500E53C36 /* SceneDelegate.swift in Sources */,
 				F1DCB6A123843F5C00E53C36 /* ItemsTableViewController.swift in Sources */,
+				F10F33CD23859E1400B1E7F7 /* LoveChangerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,13 +10,15 @@ import UIKit
 
 class ItemsTableViewController: UITableViewController {
 
-    let itemsArray = ["Honey", "Job", "Sex"]
+    let itemsArray = ["Обучение на электрогитаре", "Кодинг под iOS", "Играть в Overwatch"]
+    let imagesArray = ["guitars", "chevron.left.slash.chevron.right", "gamecontroller"]
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: K.ItemsTableViewCellNib, bundle: nil), forCellReuseIdentifier: K.ItemsTableViewCellIdentifier)
+        tableView.register(UINib(nibName: K.itemsTableViewCellNib, bundle: nil), forCellReuseIdentifier: K.itemsTableViewCellIdentifier)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,14 +42,27 @@ class ItemsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.ItemsTableViewCellIdentifier, for: indexPath) as! ItemsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.itemsTableViewCellIdentifier, for: indexPath) as! ItemsTableViewCell
         cell.itemTextLabel.text = itemsArray[indexPath.row]
+        cell.itemPerson.setBackgroundImage(UIImage(systemName: imagesArray[indexPath.row]), for: .normal)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        showAlertButtonTapped(index: indexPath.row)
     }
+    
+    
+    func showAlertButtonTapped(index: Int) {
+        K.currentImage = imagesArray[index]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let myAlert = storyboard.instantiateViewController(withIdentifier: "LoveChanger")
+        myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
     
 
     /*

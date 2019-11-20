@@ -7,6 +7,8 @@
 //
 
 struct K {
-    static let ItemsTableViewCellNib = "ItemsTableViewCell"
-    static let ItemsTableViewCellIdentifier = "ItemsCell"
+    static let itemsTableViewCellNib = "ItemsTableViewCell"
+    static let itemsTableViewCellIdentifier = "ItemsCell"
+    
+    static var currentImage = "person"
 }
