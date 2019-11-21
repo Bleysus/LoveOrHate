@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F10F33CD23859E1400B1E7F7 /* LoveChangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */; };
+		F133E58623870211002FE0F7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F133E58523870211002FE0F7 /* Launch Screen.storyboard */; };
+		F133E588238702BA002FE0F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F133E587238702BA002FE0F7 /* Default-568h@2x.png */; };
 		F1DCB68A23843EB500E53C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB68923843EB500E53C36 /* AppDelegate.swift */; };
 		F1DCB68C23843EB500E53C36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */; };
 		F1DCB69123843EB500E53C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1DCB68F23843EB500E53C36 /* Main.storyboard */; };
@@ -21,7 +23,9 @@
 
 /* Begin PBXFileReference section */
 		F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveChangerViewController.swift; sourceTree = "<group>"; };
-		F1DCB68623843EB500E53C36 /* LoveAndHate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveAndHate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F133E58523870211002FE0F7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F133E587238702BA002FE0F7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F1DCB68623843EB500E53C36 /* LoveOrHate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveOrHate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1DCB68923843EB500E53C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F1DCB69023843EB500E53C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +52,8 @@
 		F1DCB67D23843EB400E53C36 = {
 			isa = PBXGroup;
 			children = (
-				F1DCB68823843EB500E53C36 /* LoveAndHate */,
+				F133E587238702BA002FE0F7 /* Default-568h@2x.png */,
+				F1DCB68823843EB500E53C36 /* LoveOrHate */,
 				F1DCB68723843EB500E53C36 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,12 +61,12 @@
 		F1DCB68723843EB500E53C36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F1DCB68623843EB500E53C36 /* LoveAndHate.app */,
+				F1DCB68623843EB500E53C36 /* LoveOrHate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F1DCB68823843EB500E53C36 /* LoveAndHate */ = {
+		F1DCB68823843EB500E53C36 /* LoveOrHate */ = {
 			isa = PBXGroup;
 			children = (
 				F1DCB69F23843F2500E53C36 /* Controllers */,
@@ -74,7 +79,7 @@
 				F1DCB69423843EBB00E53C36 /* LaunchScreen.storyboard */,
 				F1DCB69723843EBB00E53C36 /* Info.plist */,
 			);
-			path = LoveAndHate;
+			path = LoveOrHate;
 			sourceTree = "<group>";
 		};
 		F1DCB69D23843F1000E53C36 /* DataModel */ = {
@@ -87,6 +92,7 @@
 		F1DCB69E23843F1600E53C36 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F133E58523870211002FE0F7 /* Launch Screen.storyboard */,
 				F1DCB68F23843EB500E53C36 /* Main.storyboard */,
 			);
 			path = View;
@@ -106,9 +112,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F1DCB68523843EB400E53C36 /* LoveAndHate */ = {
+		F1DCB68523843EB400E53C36 /* LoveOrHate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1DCB69A23843EBB00E53C36 /* Build configuration list for PBXNativeTarget "LoveAndHate" */;
+			buildConfigurationList = F1DCB69A23843EBB00E53C36 /* Build configuration list for PBXNativeTarget "LoveOrHate" */;
 			buildPhases = (
 				F1DCB68223843EB400E53C36 /* Sources */,
 				F1DCB68323843EB400E53C36 /* Frameworks */,
@@ -118,9 +124,9 @@
 			);
 			dependencies = (
 			);
-			name = LoveAndHate;
+			name = LoveOrHate;
 			productName = LoveAndHate;
-			productReference = F1DCB68623843EB500E53C36 /* LoveAndHate.app */;
+			productReference = F1DCB68623843EB500E53C36 /* LoveOrHate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +144,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F1DCB68123843EB400E53C36 /* Build configuration list for PBXProject "LoveAndHate" */;
+			buildConfigurationList = F1DCB68123843EB400E53C36 /* Build configuration list for PBXProject "LoveOrHate" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -151,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F1DCB68523843EB400E53C36 /* LoveAndHate */,
+				F1DCB68523843EB400E53C36 /* LoveOrHate */,
 			);
 		};
 /* End PBXProject section */
@@ -164,7 +170,9 @@
 				F1DCB6A9238449BA00E53C36 /* ItemsTableViewCell.xib in Resources */,
 				F1DCB69623843EBB00E53C36 /* LaunchScreen.storyboard in Resources */,
 				F1DCB69323843EBB00E53C36 /* Assets.xcassets in Resources */,
+				F133E58623870211002FE0F7 /* Launch Screen.storyboard in Resources */,
 				F1DCB69123843EB500E53C36 /* Main.storyboard in Resources */,
+				F133E588238702BA002FE0F7 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,12 +334,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELERY6AH4S;
-				INFOPLIST_FILE = LoveAndHate/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LoveOrHate/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bleysus.LoveAndHate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bleysus.LoveOrHate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,12 +352,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELERY6AH4S;
-				INFOPLIST_FILE = LoveAndHate/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LoveOrHate/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bleysus.LoveAndHate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bleysus.LoveOrHate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -359,7 +367,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F1DCB68123843EB400E53C36 /* Build configuration list for PBXProject "LoveAndHate" */ = {
+		F1DCB68123843EB400E53C36 /* Build configuration list for PBXProject "LoveOrHate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F1DCB69823843EBB00E53C36 /* Debug */,
@@ -368,7 +376,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1DCB69A23843EBB00E53C36 /* Build configuration list for PBXNativeTarget "LoveAndHate" */ = {
+		F1DCB69A23843EBB00E53C36 /* Build configuration list for PBXNativeTarget "LoveOrHate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F1DCB69B23843EBB00E53C36 /* Debug */,

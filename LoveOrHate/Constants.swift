@@ -11,4 +11,8 @@ struct K {
     static let itemsTableViewCellIdentifier = "ItemsCell"
     
     static var currentImage = "person"
+    static var currentLoves = 0
+    static var currentHates = 0
+    
+    
 }

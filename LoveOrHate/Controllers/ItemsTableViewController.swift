@@ -10,8 +10,17 @@ import UIKit
 
 class ItemsTableViewController: UITableViewController {
 
-    let itemsArray = ["Обучение на электрогитаре", "Кодинг под iOS", "Играть в Overwatch"]
-    let imagesArray = ["guitars", "chevron.left.slash.chevron.right", "gamecontroller"]
+    
+    let itemsArray = [
+    (name: "Обучение на электрогитаре", image: "guitars", loves: 24, hates: 12),
+    (name: "Кодинг под iOS", image: "command", loves: 15, hates: 4),
+    (name: "Игра в Overwatch", image: "gamecontroller", loves: 5, hates: 33),
+    (name: "Работа на ОШЗ", image: "car", loves: 23, hates: 35)
+    ]
+    
+    
+    //let itemsArray = ["Обучение на электрогитаре", "Кодинг под iOS", "Играть в Overwatch"]
+    //let imagesArray = ["guitars", "chevron.left.slash.chevron.right", "chevron.left.slash.chevron.right"]
     
     
     
@@ -43,8 +52,13 @@ class ItemsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.itemsTableViewCellIdentifier, for: indexPath) as! ItemsTableViewCell
-        cell.itemTextLabel.text = itemsArray[indexPath.row]
-        cell.itemPerson.setBackgroundImage(UIImage(systemName: imagesArray[indexPath.row]), for: .normal)
+        
+        //cell.itemTextLabel.text = itemsArray[indexPath.row]
+        //cell.itemPerson.setBackgroundImage(UIImage(systemName: imagesArray[indexPath.row]), for: .normal)
+        cell.itemTextLabel.text = itemsArray[indexPath.row].name
+        cell.itemPerson.setBackgroundImage(UIImage(systemName: itemsArray[indexPath.row].image), for: .normal)
+        
+        
         return cell
     }
     
@@ -55,7 +69,10 @@ class ItemsTableViewController: UITableViewController {
     
     
     func showAlertButtonTapped(index: Int) {
-        K.currentImage = imagesArray[index]
+        K.currentImage = itemsArray[index].image
+        K.currentLoves = itemsArray[index].loves
+        K.currentHates = itemsArray[index].hates
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let myAlert = storyboard.instantiateViewController(withIdentifier: "LoveChanger")
         myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext

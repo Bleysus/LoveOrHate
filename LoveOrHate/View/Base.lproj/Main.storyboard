@@ -33,7 +33,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yc1-Gj-3g9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="137"/>
+            <point key="canvasLocation" x="852" y="55"/>
         </scene>
         <!--Love Changer View Controller-->
         <scene sceneID="V5c-lr-hzN">
@@ -47,21 +47,14 @@
                                 <rect key="frame" x="57" y="248" width="300" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbv-p2-4a4">
-                                        <rect key="frame" x="127" y="335" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button">
-                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="closeButton:" destination="TN9-5v-Coo" eventType="touchUpInside" id="QUk-iq-2uH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-C3-H5G">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu2-C3-H5G">
                                         <rect key="frame" x="192" y="292" width="100" height="98.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" backgroundImage="heart.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="closeButton:" destination="TN9-5v-Coo" eventType="touchUpInside" id="d27-8I-E5x"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5678" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1fL-P8-cqd">
                                         <rect key="frame" x="191" y="228" width="101" height="76"/>
@@ -74,11 +67,14 @@
                                         <rect key="frame" x="50" y="8" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsr-sc-Myc">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsr-sc-Myc">
                                         <rect key="frame" x="18" y="289" width="100" height="98.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" backgroundImage="heart.slash.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="closeButton:" destination="TN9-5v-Coo" eventType="touchUpInside" id="gCr-OD-Qhb"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5678" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rJB-3r-CwS">
                                         <rect key="frame" x="18" y="228" width="101" height="76"/>
@@ -95,12 +91,14 @@
                         <viewLayoutGuide key="safeArea" id="7Js-j1-2QR"/>
                     </view>
                     <connections>
+                        <outlet property="hatesLabel" destination="rJB-3r-CwS" id="fwT-9C-lnL"/>
                         <outlet property="itemImage" destination="crZ-4w-03s" id="hVf-Vh-cCv"/>
+                        <outlet property="lovesLabel" destination="1fL-P8-cqd" id="i3O-bK-sym"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nk-7S-2al" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1744.9275362318842" y="14.732142857142856"/>
+            <point key="canvasLocation" x="1571" y="55"/>
         </scene>
     </scenes>
     <resources>
