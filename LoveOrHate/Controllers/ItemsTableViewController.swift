@@ -12,10 +12,10 @@ class ItemsTableViewController: UITableViewController {
 
     
     let itemsArray = [
-    (name: "Обучение на электрогитаре", image: "guitars", loves: 24, hates: 12),
-    (name: "Кодинг под iOS", image: "command", loves: 15, hates: 4),
-    (name: "Игра в Overwatch", image: "gamecontroller", loves: 5, hates: 33),
-    (name: "Работа на ОШЗ", image: "car", loves: 23, hates: 35)
+        (name: "Обучение на электрогитаре", image: "guitars", loves: 24, hates: 12, font: "Snell Roundhand"),
+        (name: "Кодинг под iOS.", image: "command", loves: 15, hates: 4, font: "Snell Roundhand"),
+        (name: "Игра в Overwatch", image: "gamecontroller", loves: 5, hates: 33, font: "Chalkduster"),
+        (name: "Работа на ОШЗ", image: "car", loves: 23, hates: 35, font: "Chalkduster")
     ]
     
     
@@ -57,6 +57,7 @@ class ItemsTableViewController: UITableViewController {
         //cell.itemPerson.setBackgroundImage(UIImage(systemName: imagesArray[indexPath.row]), for: .normal)
         cell.itemTextLabel.text = itemsArray[indexPath.row].name
         cell.itemPerson.setBackgroundImage(UIImage(systemName: itemsArray[indexPath.row].image), for: .normal)
+        cell.itemTextLabel.font = UIFont(name: itemsArray[indexPath.row].font, size: 50)
         
         
         return cell

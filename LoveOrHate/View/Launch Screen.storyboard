@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_5" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,65 +15,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="сердце с надписью" translatesAutoresizingMaskIntoConstraints="NO" id="a3i-Rg-Cql">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZr-EV-3HC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="V0E-wq-5BO">
-                                        <rect key="frame" x="20" y="283" width="374" height="252.33333333333337"/>
-                                        <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                                <rect key="frame" x="0.0" y="0.0" width="151.33333333333334" height="252.33333333333334"/>
-                                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="200"/>
-                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Y9M-br-XZ2">
-                                                <rect key="frame" x="167.33333333333334" y="0.0" width="66" height="252.33333333333334"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="200"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hate" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="klx-6D-c8F">
-                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="252.33333333333334"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="200"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="a3i-Rg-Cql">
-                                        <rect key="frame" x="0.0" y="2" width="414" height="815"/>
-                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2019 Bleysus.com. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
-                                        <rect key="frame" x="10" y="787.66666666666663" width="394" height="20.333333333333371"/>
+                                        <rect key="frame" x="10" y="826.5" width="394" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="obG-Y5-kRd" secondAttribute="trailing" constant="10" id="7Dq-av-jzt"/>
-                                    <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="10" id="FKp-yS-adj"/>
+                                    <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="15" id="FKp-yS-adj"/>
                                     <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="dZr-EV-3HC" secondAttribute="leading" constant="10" id="XiW-4F-jeS"/>
-                                    <constraint firstItem="V0E-wq-5BO" firstAttribute="centerX" secondItem="dZr-EV-3HC" secondAttribute="centerX" id="YgI-IT-IJ1"/>
-                                    <constraint firstAttribute="trailing" secondItem="a3i-Rg-Cql" secondAttribute="trailing" id="cxc-OU-k1P"/>
-                                    <constraint firstAttribute="bottom" secondItem="a3i-Rg-Cql" secondAttribute="bottom" id="hLG-kd-HLw"/>
-                                    <constraint firstItem="V0E-wq-5BO" firstAttribute="leading" secondItem="dZr-EV-3HC" secondAttribute="leading" constant="20" id="nAV-un-CnS"/>
-                                    <constraint firstItem="a3i-Rg-Cql" firstAttribute="top" secondItem="dZr-EV-3HC" secondAttribute="top" id="p3P-eA-3kv"/>
-                                    <constraint firstItem="V0E-wq-5BO" firstAttribute="centerY" secondItem="dZr-EV-3HC" secondAttribute="centerY" id="r2d-9D-afC"/>
-                                    <constraint firstAttribute="trailing" secondItem="V0E-wq-5BO" secondAttribute="trailing" constant="20" id="uFv-nw-10h"/>
-                                    <constraint firstItem="obG-Y5-kRd" firstAttribute="centerX" secondItem="dZr-EV-3HC" secondAttribute="centerX" id="wBF-pF-Lay"/>
-                                    <constraint firstItem="a3i-Rg-Cql" firstAttribute="leading" secondItem="dZr-EV-3HC" secondAttribute="leading" id="xxx-BF-q1M"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dZr-EV-3HC" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" id="GN5-g6-afK"/>
-                            <constraint firstAttribute="bottom" secondItem="dZr-EV-3HC" secondAttribute="bottom" constant="34" id="JOS-Xn-T2v"/>
+                            <constraint firstItem="a3i-Rg-Cql" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="3bu-BW-peG"/>
+                            <constraint firstItem="dZr-EV-3HC" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="GmB-HO-tPe"/>
+                            <constraint firstItem="a3i-Rg-Cql" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="IGO-2U-WC1"/>
+                            <constraint firstItem="dZr-EV-3HC" firstAttribute="bottom" secondItem="Bcu-3y-fUS" secondAttribute="bottom" id="MRh-Yh-dgP"/>
+                            <constraint firstItem="a3i-Rg-Cql" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="Z8X-vj-RXS"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="dZr-EV-3HC" secondAttribute="trailing" id="bBt-Pv-6Q6"/>
+                            <constraint firstAttribute="bottom" secondItem="a3i-Rg-Cql" secondAttribute="bottom" id="sI1-xT-5zr"/>
                             <constraint firstItem="dZr-EV-3HC" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="xaf-HG-6d3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
@@ -81,10 +53,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="52.1484375" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="64" height="54"/>
+        <image name="сердце с надписью" width="480" height="440"/>
     </resources>
 </document>
