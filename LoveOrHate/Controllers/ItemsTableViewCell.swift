@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class ItemsTableViewCell: UITableViewCell {
+class ItemsTableViewCell: SwipeTableViewCell {
 
       
     @IBOutlet weak var itemPerson: UIButton!
@@ -21,6 +22,7 @@ class ItemsTableViewCell: UITableViewCell {
         // Initialization code
         
         
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,9 +32,24 @@ class ItemsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func selectPersonPressed(_ sender: UIButton) {
-        itemTextLabel.text = "Yes!"
-       
+        itemTextLabel.text = "Yes!"      
+
         
     }
-    
 }
+
+//extension ItemsTableViewCell: SwipeTableViewCellDelegate {
+//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+//        guard orientation == .right else { return nil }
+//        let deleteAction = SwipeAction(style: .destructive, title: "Удалить") { (action, index) in
+//
+//            //self.updateModel(at: indexPath)
+//
+//        }
+//
+//        deleteAction.image = UIImage(named: "Trash")
+//        return [deleteAction]
+//    }
+//
+    
+//}

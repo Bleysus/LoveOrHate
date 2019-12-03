@@ -15,4 +15,15 @@ struct K {
     static var currentHates = 0
     
     
+    static let vcLoveChanger = "LoveChanger"
+    static let vcPhotoChanger = "PhotoChanger"
+    static let vcAddLove = "AddLove"
+    static let vcEditLove = "EditLove"
+    static let vcMainViewController = "MainViewController"
+    static let vcNavController = "NavController"
+    
+    
+    
+    
+    
 }

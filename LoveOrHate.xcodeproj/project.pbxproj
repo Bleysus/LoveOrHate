@@ -3,26 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6F833EEEF07E2DC0BD1232D /* Pods_LoveOrHate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE402CE086CEC1F69D39505D /* Pods_LoveOrHate.framework */; };
+		F10774142394FC3B00D79B8E /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10774132394FC3B00D79B8E /* SwipeTableViewController.swift */; };
+		F10774182395047600D79B8E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10774172395047600D79B8E /* SettingsViewController.swift */; };
+		F107741C239616BC00D79B8E /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107741B239616BC00D79B8E /* AddViewController.swift */; };
+		F107741E2396202100D79B8E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107741D2396202100D79B8E /* EditViewController.swift */; };
+		F1077423239657D800D79B8E /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1077422239657D800D79B8E /* LaunchViewController.swift */; };
+		F107742523965BED00D79B8E /* LoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107742423965BED00D79B8E /* LoveObject.swift */; };
 		F10F33CD23859E1400B1E7F7 /* LoveChangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */; };
+		F1249D5D2394092800710CAD /* PhotoSelecterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1249D5C2394092800710CAD /* PhotoSelecterViewController.swift */; };
 		F133E58623870211002FE0F7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F133E58523870211002FE0F7 /* Launch Screen.storyboard */; };
 		F133E588238702BA002FE0F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F133E587238702BA002FE0F7 /* Default-568h@2x.png */; };
 		F1DCB68A23843EB500E53C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB68923843EB500E53C36 /* AppDelegate.swift */; };
 		F1DCB68C23843EB500E53C36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */; };
 		F1DCB69123843EB500E53C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1DCB68F23843EB500E53C36 /* Main.storyboard */; };
 		F1DCB69323843EBB00E53C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1DCB69223843EBB00E53C36 /* Assets.xcassets */; };
-		F1DCB69623843EBB00E53C36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1DCB69423843EBB00E53C36 /* LaunchScreen.storyboard */; };
-		F1DCB6A123843F5C00E53C36 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB6A023843F5C00E53C36 /* ItemsTableViewController.swift */; };
+		F1DCB6A123843F5C00E53C36 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB6A023843F5C00E53C36 /* MainViewController.swift */; };
 		F1DCB6A8238449BA00E53C36 /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB6A6238449BA00E53C36 /* ItemsTableViewCell.swift */; };
 		F1DCB6A9238449BA00E53C36 /* ItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1DCB6A7238449BA00E53C36 /* ItemsTableViewCell.xib */; };
 		F1DCB6AB23844EAF00E53C36 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB6AA23844EAF00E53C36 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3EE2D8EDEE8B87CDA5F0D948 /* Pods-LoveOrHate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveOrHate.release.xcconfig"; path = "Target Support Files/Pods-LoveOrHate/Pods-LoveOrHate.release.xcconfig"; sourceTree = "<group>"; };
+		6FB568E6212DCB4BFCC84FF4 /* Pods-LoveOrHate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveOrHate.debug.xcconfig"; path = "Target Support Files/Pods-LoveOrHate/Pods-LoveOrHate.debug.xcconfig"; sourceTree = "<group>"; };
+		DE402CE086CEC1F69D39505D /* Pods_LoveOrHate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveOrHate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10774132394FC3B00D79B8E /* SwipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		F10774172395047600D79B8E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F107741B239616BC00D79B8E /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		F107741D2396202100D79B8E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		F1077422239657D800D79B8E /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		F107742423965BED00D79B8E /* LoveObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveObject.swift; sourceTree = "<group>"; };
 		F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveChangerViewController.swift; sourceTree = "<group>"; };
+		F1249D5C2394092800710CAD /* PhotoSelecterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelecterViewController.swift; sourceTree = "<group>"; };
 		F133E58523870211002FE0F7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F133E587238702BA002FE0F7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F1DCB68623843EB500E53C36 /* LoveOrHate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveOrHate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,9 +47,8 @@
 		F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F1DCB69023843EB500E53C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1DCB69223843EBB00E53C36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F1DCB69523843EBB00E53C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1DCB69723843EBB00E53C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1DCB6A023843F5C00E53C36 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
+		F1DCB6A023843F5C00E53C36 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F1DCB6A6238449BA00E53C36 /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
 		F1DCB6A7238449BA00E53C36 /* ItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsTableViewCell.xib; sourceTree = "<group>"; };
 		F1DCB6AA23844EAF00E53C36 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -43,18 +59,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F833EEEF07E2DC0BD1232D /* Pods_LoveOrHate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		216C20F518849A586D2F7741 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FB568E6212DCB4BFCC84FF4 /* Pods-LoveOrHate.debug.xcconfig */,
+				3EE2D8EDEE8B87CDA5F0D948 /* Pods-LoveOrHate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		55A23532D879B8940FD9CF69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE402CE086CEC1F69D39505D /* Pods_LoveOrHate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F1DCB67D23843EB400E53C36 = {
 			isa = PBXGroup;
 			children = (
 				F133E587238702BA002FE0F7 /* Default-568h@2x.png */,
 				F1DCB68823843EB500E53C36 /* LoveOrHate */,
 				F1DCB68723843EB500E53C36 /* Products */,
+				216C20F518849A586D2F7741 /* Pods */,
+				55A23532D879B8940FD9CF69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +110,7 @@
 				F1DCB69D23843F1000E53C36 /* DataModel */,
 				F1DCB68923843EB500E53C36 /* AppDelegate.swift */,
 				F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */,
-				F1DCB6AA23844EAF00E53C36 /* Constants.swift */,
 				F1DCB69223843EBB00E53C36 /* Assets.xcassets */,
-				F1DCB69423843EBB00E53C36 /* LaunchScreen.storyboard */,
 				F1DCB69723843EBB00E53C36 /* Info.plist */,
 			);
 			path = LoveOrHate;
@@ -85,6 +119,8 @@
 		F1DCB69D23843F1000E53C36 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				F1DCB6AA23844EAF00E53C36 /* Constants.swift */,
+				F107742423965BED00D79B8E /* LoveObject.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -101,10 +137,16 @@
 		F1DCB69F23843F2500E53C36 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F1DCB6A023843F5C00E53C36 /* ItemsTableViewController.swift */,
+				F1DCB6A023843F5C00E53C36 /* MainViewController.swift */,
+				F10774132394FC3B00D79B8E /* SwipeTableViewController.swift */,
 				F1DCB6A6238449BA00E53C36 /* ItemsTableViewCell.swift */,
 				F1DCB6A7238449BA00E53C36 /* ItemsTableViewCell.xib */,
 				F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */,
+				F1249D5C2394092800710CAD /* PhotoSelecterViewController.swift */,
+				F10774172395047600D79B8E /* SettingsViewController.swift */,
+				F107741B239616BC00D79B8E /* AddViewController.swift */,
+				F107741D2396202100D79B8E /* EditViewController.swift */,
+				F1077422239657D800D79B8E /* LaunchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -116,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1DCB69A23843EBB00E53C36 /* Build configuration list for PBXNativeTarget "LoveOrHate" */;
 			buildPhases = (
+				25096F5411591D82C7474CAA /* [CP] Check Pods Manifest.lock */,
 				F1DCB68223843EB400E53C36 /* Sources */,
 				F1DCB68323843EB400E53C36 /* Frameworks */,
 				F1DCB68423843EB400E53C36 /* Resources */,
+				A688FEBD764CFF384D52792E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,7 +212,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1DCB6A9238449BA00E53C36 /* ItemsTableViewCell.xib in Resources */,
-				F1DCB69623843EBB00E53C36 /* LaunchScreen.storyboard in Resources */,
 				F1DCB69323843EBB00E53C36 /* Assets.xcassets in Resources */,
 				F133E58623870211002FE0F7 /* Launch Screen.storyboard in Resources */,
 				F1DCB69123843EB500E53C36 /* Main.storyboard in Resources */,
@@ -178,17 +221,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25096F5411591D82C7474CAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoveOrHate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A688FEBD764CFF384D52792E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoveOrHate/Pods-LoveOrHate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoveOrHate/Pods-LoveOrHate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoveOrHate/Pods-LoveOrHate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F1DCB68223843EB400E53C36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F107742523965BED00D79B8E /* LoveObject.swift in Sources */,
+				F107741C239616BC00D79B8E /* AddViewController.swift in Sources */,
+				F10774142394FC3B00D79B8E /* SwipeTableViewController.swift in Sources */,
 				F1DCB6AB23844EAF00E53C36 /* Constants.swift in Sources */,
 				F1DCB6A8238449BA00E53C36 /* ItemsTableViewCell.swift in Sources */,
 				F1DCB68A23843EB500E53C36 /* AppDelegate.swift in Sources */,
+				F1249D5D2394092800710CAD /* PhotoSelecterViewController.swift in Sources */,
 				F1DCB68C23843EB500E53C36 /* SceneDelegate.swift in Sources */,
-				F1DCB6A123843F5C00E53C36 /* ItemsTableViewController.swift in Sources */,
+				F1077423239657D800D79B8E /* LaunchViewController.swift in Sources */,
+				F1DCB6A123843F5C00E53C36 /* MainViewController.swift in Sources */,
 				F10F33CD23859E1400B1E7F7 /* LoveChangerViewController.swift in Sources */,
+				F107741E2396202100D79B8E /* EditViewController.swift in Sources */,
+				F10774182395047600D79B8E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,14 +293,6 @@
 				F1DCB69023843EB500E53C36 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F1DCB69423843EBB00E53C36 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F1DCB69523843EBB00E53C36 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -330,6 +414,7 @@
 		};
 		F1DCB69B23843EBB00E53C36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FB568E6212DCB4BFCC84FF4 /* Pods-LoveOrHate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +433,7 @@
 		};
 		F1DCB69C23843EBB00E53C36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EE2D8EDEE8B87CDA5F0D948 /* Pods-LoveOrHate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
