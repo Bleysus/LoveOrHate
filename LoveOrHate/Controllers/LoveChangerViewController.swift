@@ -13,11 +13,26 @@ class LoveChangerViewController: UIViewController {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var lovesLabel: UILabel!
     @IBOutlet weak var hatesLabel: UILabel!
+    @IBOutlet weak var hatesPlusHeart: UIButton!
+    @IBOutlet weak var lovesPlusHeart: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .backgroudColor
+        
+        view.viewWithTag(1)?.backgroundColor = .red
+
+        itemImage.tintColor = .photoColor
+        
+        lovesLabel.tintColor = .loveColor
+        lovesPlusHeart.tintColor = .loveColor
+                
+        hatesLabel.tintColor = .hateColor
+        hatesPlusHeart.tintColor = .hateColor
+        
+                
         itemImage.image = UIImage(systemName: K.currentImage)
         lovesLabel.text = String(K.currentLoves)
         hatesLabel.text = String(K.currentHates)
@@ -26,7 +41,7 @@ class LoveChangerViewController: UIViewController {
     }
     
 
-    @IBAction func closeButton(_ sender: UIButton) {
+    @IBAction func heartButtonPressed(_ sender: UIButton) {
                         
         switch sender.tag {
         case 1:
@@ -45,4 +60,7 @@ class LoveChangerViewController: UIViewController {
         
     }
     
+    @IBAction func CloseButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

@@ -26,9 +26,7 @@ class EditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        ColorScheme.init(theme: LightTheme())
-        
+                
         view.backgroundColor = .backgroudColor
         
         itemImage.tintColor = .photoColor
