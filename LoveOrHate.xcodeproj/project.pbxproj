@@ -15,6 +15,7 @@
 		F1077423239657D800D79B8E /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1077422239657D800D79B8E /* LaunchViewController.swift */; };
 		F107742523965BED00D79B8E /* CurrentLoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107742423965BED00D79B8E /* CurrentLoveObject.swift */; };
 		F107742723975F0C00D79B8E /* PhotoSelecterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107742623975F0C00D79B8E /* PhotoSelecterCollectionViewCell.swift */; };
+		F10774292398B2F000D79B8E /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10774282398B2F000D79B8E /* ColorScheme.swift */; };
 		F10F33CD23859E1400B1E7F7 /* LoveChangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */; };
 		F1249D5D2394092800710CAD /* PhotoSelecterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1249D5C2394092800710CAD /* PhotoSelecterViewController.swift */; };
 		F133E58623870211002FE0F7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F133E58523870211002FE0F7 /* Launch Screen.storyboard */; };
@@ -40,6 +41,7 @@
 		F1077422239657D800D79B8E /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F107742423965BED00D79B8E /* CurrentLoveObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLoveObject.swift; sourceTree = "<group>"; };
 		F107742623975F0C00D79B8E /* PhotoSelecterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelecterCollectionViewCell.swift; sourceTree = "<group>"; };
+		F10774282398B2F000D79B8E /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveChangerViewController.swift; sourceTree = "<group>"; };
 		F1249D5C2394092800710CAD /* PhotoSelecterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelecterViewController.swift; sourceTree = "<group>"; };
 		F133E58523870211002FE0F7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		F1DCB68823843EB500E53C36 /* LoveOrHate */ = {
 			isa = PBXGroup;
 			children = (
+				F10774282398B2F000D79B8E /* ColorScheme.swift */,
 				F1DCB69F23843F2500E53C36 /* Controllers */,
 				F1DCB69E23843F1600E53C36 /* View */,
 				F1DCB69D23843F1000E53C36 /* DataModel */,
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F107742523965BED00D79B8E /* CurrentLoveObject.swift in Sources */,
+				F10774292398B2F000D79B8E /* ColorScheme.swift in Sources */,
 				F107741C239616BC00D79B8E /* AddViewController.swift in Sources */,
 				F107742723975F0C00D79B8E /* PhotoSelecterCollectionViewCell.swift in Sources */,
 				F10774142394FC3B00D79B8E /* SwipeTableViewController.swift in Sources */,

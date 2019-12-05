@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -26,6 +26,7 @@
                                     <constraint firstAttribute="width" constant="70" id="gvw-ea-u9l"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.1205622032" green="0.1786500812" blue="0.54532665010000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="person" catalog="system"/>
                                 <connections>
                                     <action selector="selectPersonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wz8-gz-5Kg"/>
@@ -36,12 +37,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Honey" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="wBL-XF-V3b">
                                         <rect key="frame" x="10" y="5" width="199" height="60"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="100"/>
-                                        <nil key="textColor"/>
+                                        <color key="tintColor" red="0.1205622032" green="0.1786500812" blue="0.54532665010000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.1205622032" green="0.1786500812" blue="0.54532665010000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="wBL-XF-V3b" firstAttribute="top" secondItem="gG7-0H-zLt" secondAttribute="top" constant="5" id="Kaj-gz-olx"/>
                                     <constraint firstAttribute="bottom" secondItem="wBL-XF-V3b" secondAttribute="bottom" constant="5" id="Qpl-i9-wB1"/>
