@@ -431,7 +431,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.1333130002" green="0.1568968594" blue="0.54502791169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="Cm7-NC-nOL"/>
@@ -564,7 +563,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="flG-k4-PYw" firstAttribute="leading" secondItem="92j-pT-Oz7" secondAttribute="leading" id="3yY-lH-lY6"/>
                                     <constraint firstAttribute="trailing" secondItem="flG-k4-PYw" secondAttribute="trailing" id="efW-dt-gQj"/>
@@ -580,9 +578,13 @@
                         <viewLayoutGuide key="safeArea" id="PdM-NF-gVL"/>
                     </view>
                     <connections>
-                        <outlet property="hatesLabel" destination="hqa-WY-0aS" id="gje-2C-lyl"/>
-                        <outlet property="itemImage" destination="6w5-9w-D3s" id="wLz-lc-bN7"/>
-                        <outlet property="lovesLabel" destination="o2f-4K-hGa" id="8k8-1C-dgx"/>
+                        <outlet property="hatesLabel" destination="hqa-WY-0aS" id="Xxp-Jn-W0Q"/>
+                        <outlet property="hatesMinusHeart" destination="f2s-ir-mFa" id="1LL-cT-xR0"/>
+                        <outlet property="hatesPlusHeart" destination="XbY-Ip-W6D" id="MmE-1d-Ikk"/>
+                        <outlet property="itemImage" destination="6w5-9w-D3s" id="zHG-qz-xWc"/>
+                        <outlet property="lovesLabel" destination="o2f-4K-hGa" id="qdK-Hg-EvY"/>
+                        <outlet property="lovesMinusHeart" destination="fwi-hL-dGC" id="8iY-dE-u6t"/>
+                        <outlet property="lovesPlusHeart" destination="B9W-Fc-X1h" id="XtA-ar-evd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adq-Dz-dtr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

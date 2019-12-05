@@ -25,6 +25,6 @@ struct K {
     static let vcMainViewController = "MainViewController"
     static let vcNavController = "NavController"
     
-    
+    static let isDarkTheme = false
     
 }

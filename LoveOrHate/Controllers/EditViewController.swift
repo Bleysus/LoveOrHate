@@ -11,13 +11,40 @@ import UIKit
 class EditViewController: UIViewController {
 
     @IBOutlet weak var itemImage: UIImageView!
-    @IBOutlet weak var lovesLabel: UILabel!
+    
     @IBOutlet weak var hatesLabel: UILabel!
+    @IBOutlet weak var hatesPlusHeart: UIButton!
+    @IBOutlet weak var hatesMinusHeart: UIButton!
+    
+    @IBOutlet weak var lovesLabel: UILabel!
+    @IBOutlet weak var lovesPlusHeart: UIButton!
+    @IBOutlet weak var lovesMinusHeart: UIButton!
+    
+
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ColorScheme.init(theme: LightTheme())
+        
+        view.backgroundColor = .backgroudColor
+        
+        itemImage.tintColor = .photoColor
+        
+        lovesLabel.tintColor = .loveColor
+        lovesPlusHeart.tintColor = .loveColor
+        lovesMinusHeart.tintColor = .loveColor
+        
+        hatesLabel.tintColor = .hateColor
+        hatesPlusHeart.tintColor = .hateColor
+        hatesMinusHeart.tintColor = .hateColor
+        
     }
+    
+    
+    
         
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
