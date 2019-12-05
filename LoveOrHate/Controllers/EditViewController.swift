@@ -18,8 +18,15 @@ class EditViewController: UIViewController {
         super.viewDidLoad()
         
     }
+        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        print("viewWillAppear")
+        itemImage.image = UIImage(systemName: CurrentLoveObject.currentImage ?? "person")
+        
+    }
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -52,6 +59,11 @@ class EditViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.PhotoSelecterSegue {
+            print("catch it!")
+        }
+    }
     
     
     @IBAction func DiscardButtonPressed(_ sender: UIButton) {

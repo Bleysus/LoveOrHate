@@ -9,6 +9,9 @@
 struct K {
     static let itemsTableViewCellNib = "ItemsTableViewCell"
     static let itemsTableViewCellIdentifier = "ItemsCell"
+    static let photoSelecterCellIdentifier = "PhotoSelecterCell"
+    
+    static let PhotoSelecterSegue = "PhotoSelecterSegue"
     
     static var currentImage = "person"
     static var currentLoves = 0
@@ -21,8 +24,6 @@ struct K {
     static let vcEditLove = "EditLove"
     static let vcMainViewController = "MainViewController"
     static let vcNavController = "NavController"
-    
-    
     
     
     

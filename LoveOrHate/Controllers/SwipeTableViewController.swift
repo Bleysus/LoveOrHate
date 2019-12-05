@@ -38,7 +38,7 @@ class SwipeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.itemsTableViewCellIdentifier, for: indexPath) as! ItemsTableViewCell
         cell.itemTextLabel.text = itemsArray[indexPath.row].name
         cell.itemPerson.setBackgroundImage(UIImage(systemName: itemsArray[indexPath.row].image), for: .normal)
-        cell.itemTextLabel.font = UIFont(name: itemsArray[indexPath.row].font, size: 50)
+        //cell.itemTextLabel.font = UIFont(name: itemsArray[indexPath.row].font, size: 50)
         
         cell.delegate = self
         return cell
