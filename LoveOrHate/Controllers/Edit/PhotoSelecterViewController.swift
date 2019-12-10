@@ -8,17 +8,24 @@
 
 import UIKit
 
+protocol PhotoSelecterViewControllerDelegate {
+    func fetchImage(image: String)
+}
+
 class PhotoSelecterViewController: UICollectionViewController {
 
+    var delegate: PhotoSelecterViewControllerDelegate?
+    
+    
     @IBOutlet weak var cellImage: UIImageView!
+    
+    var currentImage = ""
     
     let photosArray = ["paperplane","archivebox","doc","calendar","person","clear","globe","sun.max","moon","cloud","cloud.bolt","wind","snow","tornado","hurricane","keyboard","play","stop","speaker","music.note","music.mic","heart","location"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -34,7 +41,7 @@ class PhotoSelecterViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        CurrentLoveObject.currentImage = photosArray[indexPath.row]
+        self.delegate?.fetchImage(image: photosArray[indexPath.row])
         self.dismiss(animated: true, completion: nil)
     }
     

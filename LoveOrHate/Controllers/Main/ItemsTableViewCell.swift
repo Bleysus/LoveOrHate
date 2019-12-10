@@ -19,17 +19,12 @@ class ItemsTableViewCell: SwipeTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-        
         
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-
-        // Configure the view for the selected state
     }
     @IBAction func selectPersonPressed(_ sender: UIButton) {
         itemTextLabel.text = "Yes!"      
@@ -38,18 +33,3 @@ class ItemsTableViewCell: SwipeTableViewCell {
     }
 }
 
-//extension ItemsTableViewCell: SwipeTableViewCellDelegate {
-//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
-//        guard orientation == .right else { return nil }
-//        let deleteAction = SwipeAction(style: .destructive, title: "Удалить") { (action, index) in
-//
-//            //self.updateModel(at: indexPath)
-//
-//        }
-//
-//        deleteAction.image = UIImage(named: "Trash")
-//        return [deleteAction]
-//    }
-//
-    
-//}

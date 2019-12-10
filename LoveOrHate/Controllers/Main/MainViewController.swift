@@ -23,14 +23,31 @@ class MainViewController: SwipeTableViewController {
     }    
     
     func showAlertButtonTapped(index: Int) {
-        K.currentImage = itemsArray[index].image
-        K.currentLoves = itemsArray[index].loves
-        K.currentHates = itemsArray[index].hates
+        currentLoveObject.currentLoves = itemsArray[index].loves
+        currentLoveObject.currentHates = itemsArray[index].hates
+        currentLoveObject.currentIndexPath = index
+        currentLoveObject.currentImage = itemsArray[index].image
+
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let myAlert = storyboard.instantiateViewController(withIdentifier: K.vcLoveChanger)
+        let myAlert = storyboard.instantiateViewController(withIdentifier: K.vcLoveChanger) as! LoveChangerViewController
         myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
         myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        myAlert.currentLoveObject = currentLoveObject
+        myAlert.delegate = self
         self.present(myAlert, animated: true, completion: nil)
     }
 }
+
+extension MainViewController: LoveChangerViewControllerDelegate {
+    func fetchChangedData(data: CurrentLoveObject) {
+        itemsArray[data.currentIndexPath!].loves = data.currentLoves ?? 0
+        itemsArray[data.currentIndexPath!].hates = data.currentHates ?? 0
+        itemsArray[data.currentIndexPath!].image = data.currentImage ?? "person"
+        
+        tableView.reloadData()
+    }
+    }
+
+
+

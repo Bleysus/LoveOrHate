@@ -87,6 +87,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F1165B2A239F4B77005EBCB6 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				F107741D2396202100D79B8E /* EditViewController.swift */,
+				F1249D5C2394092800710CAD /* PhotoSelecterViewController.swift */,
+				F107742623975F0C00D79B8E /* PhotoSelecterCollectionViewCell.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		F1165B2B239F4B86005EBCB6 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				F107741B239616BC00D79B8E /* AddViewController.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		F1165B2C239F4BC6005EBCB6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F1DCB6A023843F5C00E53C36 /* MainViewController.swift */,
+				F10774132394FC3B00D79B8E /* SwipeTableViewController.swift */,
+				F1DCB6A6238449BA00E53C36 /* ItemsTableViewCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F1165B2D239F4C21005EBCB6 /* Different */ = {
+			isa = PBXGroup;
+			children = (
+				F1077422239657D800D79B8E /* LaunchViewController.swift */,
+			);
+			path = Different;
+			sourceTree = "<group>";
+		};
+		F1165B2E239F4C4B005EBCB6 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F1DCB68923843EB500E53C36 /* AppDelegate.swift */,
+				F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		F1DCB67D23843EB400E53C36 = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +158,7 @@
 				F1DCB69F23843F2500E53C36 /* Controllers */,
 				F1DCB69E23843F1600E53C36 /* View */,
 				F1DCB69D23843F1000E53C36 /* DataModel */,
-				F1DCB68923843EB500E53C36 /* AppDelegate.swift */,
-				F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */,
+				F1165B2E239F4C4B005EBCB6 /* Delegates */,
 				F1DCB69223843EBB00E53C36 /* Assets.xcassets */,
 				F1DCB69723843EBB00E53C36 /* Info.plist */,
 			);
@@ -134,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				F133E58523870211002FE0F7 /* Launch Screen.storyboard */,
+				F1DCB6A7238449BA00E53C36 /* ItemsTableViewCell.xib */,
 				F1DCB68F23843EB500E53C36 /* Main.storyboard */,
 			);
 			path = View;
@@ -142,17 +187,12 @@
 		F1DCB69F23843F2500E53C36 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F1DCB6A023843F5C00E53C36 /* MainViewController.swift */,
-				F10774132394FC3B00D79B8E /* SwipeTableViewController.swift */,
-				F1DCB6A6238449BA00E53C36 /* ItemsTableViewCell.swift */,
-				F1DCB6A7238449BA00E53C36 /* ItemsTableViewCell.xib */,
+				F1165B2D239F4C21005EBCB6 /* Different */,
+				F1165B2C239F4BC6005EBCB6 /* Main */,
+				F1165B2B239F4B86005EBCB6 /* Add */,
+				F1165B2A239F4B77005EBCB6 /* Edit */,
 				F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */,
-				F1249D5C2394092800710CAD /* PhotoSelecterViewController.swift */,
-				F107742623975F0C00D79B8E /* PhotoSelecterCollectionViewCell.swift */,
 				F10774172395047600D79B8E /* SettingsViewController.swift */,
-				F107741B239616BC00D79B8E /* AddViewController.swift */,
-				F107741D2396202100D79B8E /* EditViewController.swift */,
-				F1077422239657D800D79B8E /* LaunchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -428,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELERY6AH4S;
 				INFOPLIST_FILE = "$(SRCROOT)/LoveOrHate/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -435,7 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bleysus.LoveOrHate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -447,6 +488,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ELERY6AH4S;
 				INFOPLIST_FILE = "$(SRCROOT)/LoveOrHate/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +496,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bleysus.LoveOrHate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -13,6 +13,8 @@ import SwipeCellKit
 //class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
 class SwipeTableViewController: UITableViewController {
 
+    var currentLoveObject = CurrentLoveObject()
+    
         var itemsArray = [
         (name: "Обучение на электрогитаре", image: "guitars", loves: 24, hates: 12, font: "Snell Roundhand"),
         (name: "Кодинг под iOS.", image: "command", loves: 15, hates: 4, font: "Snell Roundhand"),
@@ -51,10 +53,19 @@ class SwipeTableViewController: UITableViewController {
     func updateModel(at indexPath: IndexPath, action: String) {
         switch action {
         case "Edit":
+            //----
+            currentLoveObject.currentLoves = itemsArray[indexPath.row].loves
+            currentLoveObject.currentHates = itemsArray[indexPath.row].hates
+            currentLoveObject.currentIndexPath = indexPath.row
+            currentLoveObject.currentImage = itemsArray[indexPath.row].image
+            
+            //----
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let myAlert = storyboard.instantiateViewController(withIdentifier: K.vcEditLove)
+            let myAlert = storyboard.instantiateViewController(withIdentifier: K.vcEditLove) as! EditViewController
             myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
             myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            myAlert.currentLoveObject = currentLoveObject
+            myAlert.delegate = self
             self.present(myAlert, animated: true, completion: nil)
         case "Delete":
             itemsArray.remove(at: indexPath.row)
@@ -63,7 +74,8 @@ class SwipeTableViewController: UITableViewController {
         }
         
         tableView.reloadData()
-    }    
+    }
+    
 }
 
 extension SwipeTableViewController: SwipeTableViewCellDelegate {
@@ -84,6 +96,17 @@ extension SwipeTableViewController: SwipeTableViewCellDelegate {
         
         return [deleteAction, editAction]
     }
+}
+
+extension SwipeTableViewController: EditViewControllerDelegate {
+    func fetchEditedData(data: CurrentLoveObject) {
+        itemsArray[data.currentIndexPath!].loves = data.currentLoves ?? 0
+        itemsArray[data.currentIndexPath!].hates = data.currentHates ?? 0
+        itemsArray[data.currentIndexPath!].image = data.currentImage ?? "person"
+        
+        tableView.reloadData()
+    }
+    
 }
 
 

@@ -8,7 +8,15 @@
 
 import UIKit
 
+protocol LoveChangerViewControllerDelegate {
+    func fetchChangedData(data: CurrentLoveObject)
+}
+
 class LoveChangerViewController: UIViewController {
+    
+    var delegate: LoveChangerViewControllerDelegate?
+    
+    var currentLoveObject = CurrentLoveObject()
     
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var lovesLabel: UILabel!
@@ -16,28 +24,31 @@ class LoveChangerViewController: UIViewController {
     @IBOutlet weak var hatesPlusHeart: UIButton!
     @IBOutlet weak var lovesPlusHeart: UIButton!
     
+    private func setTheme() {
+        //Set Colors
+        view.backgroundColor = .backgroudColor
+        view.viewWithTag(1)?.backgroundColor = .red
+        itemImage.tintColor = .photoColor
+        lovesLabel.tintColor = .loveColor
+        lovesPlusHeart.tintColor = .loveColor
+        hatesLabel.tintColor = .hateColor
+        hatesPlusHeart.tintColor = .hateColor
+        //-----
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .backgroudColor
-        
-        view.viewWithTag(1)?.backgroundColor = .red
+        setTheme()
 
-        itemImage.tintColor = .photoColor
         
-        lovesLabel.tintColor = .loveColor
-        lovesPlusHeart.tintColor = .loveColor
+        
+        hatesLabel.text = String(currentLoveObject.currentHates ?? 0)
+        lovesLabel.text = String(currentLoveObject.currentLoves ?? 0)
+        itemImage.image = UIImage(systemName: currentLoveObject.currentImage ?? "person")
                 
-        hatesLabel.tintColor = .hateColor
-        hatesPlusHeart.tintColor = .hateColor
-        
-                
-        itemImage.image = UIImage(systemName: K.currentImage)
-        lovesLabel.text = String(K.currentLoves)
-        hatesLabel.text = String(K.currentHates)
-        
-        // Do any additional setup after loading the view.
+
     }
     
 
@@ -45,22 +56,29 @@ class LoveChangerViewController: UIViewController {
                         
         switch sender.tag {
         case 1:
-            K.currentHates += 1
-            hatesLabel.text = String(K.currentHates)
+            currentLoveObject.currentHates! += 1
+            hatesLabel.text = String(currentLoveObject.currentHates ?? 0)
         case 2:
-            K.currentLoves += 1
-            lovesLabel.text = String(K.currentLoves)
+            currentLoveObject.currentLoves! += 1
+            lovesLabel.text = String(currentLoveObject.currentLoves ?? 0)
         default: break
         }
         
                 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-            self.dismiss(animated: true, completion: nil)
+            self.exitLoveChanger()
         })
         
     }
     
     @IBAction func CloseButtonPressed(_ sender: UIButton) {
+        exitLoveChanger()
+    }
+    
+    
+    func exitLoveChanger() {
+        self.delegate?.fetchChangedData(data: currentLoveObject)
         self.dismiss(animated: true, completion: nil)
     }
+    
 }

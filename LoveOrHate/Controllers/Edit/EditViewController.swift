@@ -8,8 +8,16 @@
 
 import UIKit
 
+protocol EditViewControllerDelegate {
+    func fetchEditedData(data: CurrentLoveObject)
+}
+
 class EditViewController: UIViewController {
 
+    var delegate: EditViewControllerDelegate?
+    
+    var currentLoveObject = CurrentLoveObject()
+    
     @IBOutlet weak var itemImage: UIImageView!
     
     @IBOutlet weak var hatesLabel: UILabel!
@@ -20,47 +28,27 @@ class EditViewController: UIViewController {
     @IBOutlet weak var lovesPlusHeart: UIButton!
     @IBOutlet weak var lovesMinusHeart: UIButton!
     
-
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-                
+    private func setTheme() {
         view.backgroundColor = .backgroudColor
-        
-        itemImage.tintColor = .photoColor
-        
+        itemImage.tintColor = .loveColor
         lovesLabel.tintColor = .loveColor
         lovesPlusHeart.tintColor = .loveColor
         lovesMinusHeart.tintColor = .loveColor
-        
         hatesLabel.tintColor = .hateColor
         hatesPlusHeart.tintColor = .hateColor
         hatesMinusHeart.tintColor = .hateColor
-        
     }
     
-    
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        print("viewWillAppear")
-        itemImage.image = UIImage(systemName: CurrentLoveObject.currentImage ?? "person")
-        
+        setTheme()
+                
+        hatesLabel.text = String(currentLoveObject.currentHates ?? 0)
+        lovesLabel.text = String(currentLoveObject.currentLoves ?? 0)
+        itemImage.image = UIImage(systemName: currentLoveObject.currentImage ?? "person")
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     
     @IBAction func loveChangerPressed(_ sender: UIButton) {
@@ -77,7 +65,7 @@ class EditViewController: UIViewController {
         case 22:
             if Int(lovesLabel.text!) ?? 1 > 0 {
                 lovesLabel.text = String(Int(lovesLabel.text!)! - 1) }
-            
+           
             
         default:
             break
@@ -86,7 +74,8 @@ class EditViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.PhotoSelecterSegue {
-            print("catch it!")
+            let vc = segue.destination as! PhotoSelecterViewController
+            vc.delegate = self
         }
     }
     
@@ -103,7 +92,20 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func CloseButtonPressed(_ sender: UIButton) {
+        currentLoveObject.currentHates = Int(hatesLabel.text ?? "0")
+        currentLoveObject.currentLoves = Int(lovesLabel.text ?? "0")
+        
+        self.delegate?.fetchEditedData(data: currentLoveObject)        
         self.dismiss(animated: true, completion: nil)
     }
     
+}
+
+
+extension EditViewController: PhotoSelecterViewControllerDelegate {
+    func fetchImage(image: String) {
+        print(image)
+        itemImage.image = UIImage(systemName: image)
+        currentLoveObject.currentImage = image
+    }
 }

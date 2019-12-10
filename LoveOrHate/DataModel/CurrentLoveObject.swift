@@ -9,8 +9,10 @@
 import Foundation
 
 struct CurrentLoveObject {
-    static var currentName: String?
-    static var currentImage: String?
-    static var currentLoves: Int?
-    static var currentHates: Int?
+    var currentName: String?
+    var currentDescription: String?
+    var currentImage: String?
+    var currentLoves: Int?
+    var currentHates: Int?
+    var currentIndexPath: Int?    
 }

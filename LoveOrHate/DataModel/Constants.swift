@@ -12,12 +12,7 @@ struct K {
     static let photoSelecterCellIdentifier = "PhotoSelecterCell"
     
     static let PhotoSelecterSegue = "PhotoSelecterSegue"
-    
-    static var currentImage = "person"
-    static var currentLoves = 0
-    static var currentHates = 0
-    
-    
+        
     static let vcLoveChanger = "LoveChanger"
     static let vcPhotoChanger = "PhotoChanger"
     static let vcAddLove = "AddLove"
@@ -26,5 +21,6 @@ struct K {
     static let vcNavController = "NavController"
     
     static let isDarkTheme = false
+    static let isAutoClosingLoveChanger = true
     
 }
