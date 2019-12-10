@@ -28,6 +28,8 @@ class EditViewController: UIViewController {
     @IBOutlet weak var lovesPlusHeart: UIButton!
     @IBOutlet weak var lovesMinusHeart: UIButton!
     
+    @IBOutlet weak var editLoveTextField: UITextField!
+    
     private func setTheme() {
         view.backgroundColor = .backgroudColor
         itemImage.tintColor = .loveColor
@@ -42,11 +44,30 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        editLoveTextField.delegate = self
+        
         setTheme()
                 
         hatesLabel.text = String(currentLoveObject.currentHates ?? 0)
         lovesLabel.text = String(currentLoveObject.currentLoves ?? 0)
         itemImage.image = UIImage(systemName: currentLoveObject.currentImage ?? "person")
+        
+        if currentLoveObject.currentName != "Проведите влево для редактирования" {
+            editLoveTextField.text = currentLoveObject.currentName
+        } else {
+            editLoveTextField.placeholder = "Введите название для любви"
+        }
+        
+        
+        
+        
+        //скрыть клаву по тапу
+        let tapScreen = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapScreen.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapScreen)
+        //-----
+        
+        
     }
     
     
@@ -94,18 +115,33 @@ class EditViewController: UIViewController {
     @IBAction func CloseButtonPressed(_ sender: UIButton) {
         currentLoveObject.currentHates = Int(hatesLabel.text ?? "0")
         currentLoveObject.currentLoves = Int(lovesLabel.text ?? "0")
-        
+        currentLoveObject.currentName = editLoveTextField.text
+            
         self.delegate?.fetchEditedData(data: currentLoveObject)        
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @objc func dismissKeyboard(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     
 }
 
 
 extension EditViewController: PhotoSelecterViewControllerDelegate {
     func fetchImage(image: String) {
-        print(image)
         itemImage.image = UIImage(systemName: image)
         currentLoveObject.currentImage = image
     }
+}
+
+extension EditViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+    }
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        view.endEditing(true)
+//    }
+    
 }

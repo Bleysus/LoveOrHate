@@ -41,6 +41,9 @@ class SwipeTableViewController: UITableViewController {
         cell.itemTextLabel.text = itemsArray[indexPath.row].name
         cell.itemPerson.setBackgroundImage(UIImage(systemName: itemsArray[indexPath.row].image), for: .normal)
         //cell.itemTextLabel.font = UIFont(name: itemsArray[indexPath.row].font, size: 50)
+        let itemCoefficient = round(100 * (Float(itemsArray[indexPath.row].loves) / Float(itemsArray[indexPath.row].hates))) / 100
+        
+        cell.itemCoefficientLabel.text = String(itemCoefficient)
         
         cell.delegate = self
         return cell
@@ -58,8 +61,8 @@ class SwipeTableViewController: UITableViewController {
             currentLoveObject.currentHates = itemsArray[indexPath.row].hates
             currentLoveObject.currentIndexPath = indexPath.row
             currentLoveObject.currentImage = itemsArray[indexPath.row].image
-            
-            //----
+            currentLoveObject.currentName = itemsArray[indexPath.row].name
+                            //----
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let myAlert = storyboard.instantiateViewController(withIdentifier: K.vcEditLove) as! EditViewController
             myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
@@ -103,7 +106,7 @@ extension SwipeTableViewController: EditViewControllerDelegate {
         itemsArray[data.currentIndexPath!].loves = data.currentLoves ?? 0
         itemsArray[data.currentIndexPath!].hates = data.currentHates ?? 0
         itemsArray[data.currentIndexPath!].image = data.currentImage ?? "person"
-        
+        itemsArray[data.currentIndexPath!].name = data.currentName ?? "Проведите влево для редактирования"
         tableView.reloadData()
     }
     

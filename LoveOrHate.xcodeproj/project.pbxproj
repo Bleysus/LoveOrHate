@@ -10,7 +10,6 @@
 		C6F833EEEF07E2DC0BD1232D /* Pods_LoveOrHate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE402CE086CEC1F69D39505D /* Pods_LoveOrHate.framework */; };
 		F10774142394FC3B00D79B8E /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10774132394FC3B00D79B8E /* SwipeTableViewController.swift */; };
 		F10774182395047600D79B8E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10774172395047600D79B8E /* SettingsViewController.swift */; };
-		F107741C239616BC00D79B8E /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107741B239616BC00D79B8E /* AddViewController.swift */; };
 		F107741E2396202100D79B8E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107741D2396202100D79B8E /* EditViewController.swift */; };
 		F1077423239657D800D79B8E /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1077422239657D800D79B8E /* LaunchViewController.swift */; };
 		F107742523965BED00D79B8E /* CurrentLoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107742423965BED00D79B8E /* CurrentLoveObject.swift */; };
@@ -36,7 +35,6 @@
 		DE402CE086CEC1F69D39505D /* Pods_LoveOrHate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveOrHate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10774132394FC3B00D79B8E /* SwipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		F10774172395047600D79B8E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		F107741B239616BC00D79B8E /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		F107741D2396202100D79B8E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		F1077422239657D800D79B8E /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		F107742423965BED00D79B8E /* CurrentLoveObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLoveObject.swift; sourceTree = "<group>"; };
@@ -95,14 +93,6 @@
 				F107742623975F0C00D79B8E /* PhotoSelecterCollectionViewCell.swift */,
 			);
 			path = Edit;
-			sourceTree = "<group>";
-		};
-		F1165B2B239F4B86005EBCB6 /* Add */ = {
-			isa = PBXGroup;
-			children = (
-				F107741B239616BC00D79B8E /* AddViewController.swift */,
-			);
-			path = Add;
 			sourceTree = "<group>";
 		};
 		F1165B2C239F4BC6005EBCB6 /* Main */ = {
@@ -189,7 +179,6 @@
 			children = (
 				F1165B2D239F4C21005EBCB6 /* Different */,
 				F1165B2C239F4BC6005EBCB6 /* Main */,
-				F1165B2B239F4B86005EBCB6 /* Add */,
 				F1165B2A239F4B77005EBCB6 /* Edit */,
 				F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */,
 				F10774172395047600D79B8E /* SettingsViewController.swift */,
@@ -316,7 +305,6 @@
 			files = (
 				F107742523965BED00D79B8E /* CurrentLoveObject.swift in Sources */,
 				F10774292398B2F000D79B8E /* ColorScheme.swift in Sources */,
-				F107741C239616BC00D79B8E /* AddViewController.swift in Sources */,
 				F107742723975F0C00D79B8E /* PhotoSelecterCollectionViewCell.swift in Sources */,
 				F10774142394FC3B00D79B8E /* SwipeTableViewController.swift in Sources */,
 				F1DCB6AB23844EAF00E53C36 /* Constants.swift in Sources */,

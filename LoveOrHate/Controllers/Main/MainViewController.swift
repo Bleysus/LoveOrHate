@@ -15,6 +15,7 @@ class MainViewController: SwipeTableViewController {
         super.viewDidLoad()
     }
 
+    
     // MARK: - Table view data source
    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -37,6 +38,13 @@ class MainViewController: SwipeTableViewController {
         myAlert.delegate = self
         self.present(myAlert, animated: true, completion: nil)
     }
+    
+    @IBAction func addNewLove(_ sender: UIBarButtonItem) {
+        let newItem = (name: "Проведите влево для редактирования", image: "arrow.left", loves: 0, hates: 0, font: "Snell Roundhand")
+        itemsArray.append(newItem)
+        tableView.reloadData()
+    }
+    
 }
 
 extension MainViewController: LoveChangerViewControllerDelegate {

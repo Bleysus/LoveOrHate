@@ -16,6 +16,7 @@ class ItemsTableViewCell: SwipeTableViewCell {
     @IBOutlet weak var itemView: UIView!
     @IBOutlet weak var itemTextLabel: UILabel!
     @IBOutlet weak var itemHeartImage: UIImageView!
+    @IBOutlet weak var itemCoefficientLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

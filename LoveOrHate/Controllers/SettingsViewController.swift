@@ -9,25 +9,32 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
+    @IBOutlet weak var autoCloseLoveViewSwitch: UISwitch!
+    @IBOutlet weak var themeSwitch: UISwitch!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        autoCloseLoveViewSwitch.isOn = K.isAutoClosingLoveChanger
+        themeSwitch.isOn = K.isDarkTheme
+        
+        
+        autoCloseLoveViewSwitch.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
+        themeSwitch.addTarget(self, action: #selector(switchChanged), for: UIControl.Event.valueChanged)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func switchChanged(settingsSwitch: UISwitch) {
+        switch settingsSwitch.tag {
+        case 1:
+            K.isAutoClosingLoveChanger = settingsSwitch.isOn //настройка автозакрытия окна любви
+        case 2:
+            K.isDarkTheme = settingsSwitch.isOn // настройка темы
+        default:
+            break
+        }
     }
-    */
-    
-    
 
     @IBAction func settinsButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

@@ -64,11 +64,11 @@ class LoveChangerViewController: UIViewController {
         default: break
         }
         
-                
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-            self.exitLoveChanger()
-        })
-        
+        if K.isAutoClosingLoveChanger {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                self.exitLoveChanger()
+            })
+        }
     }
     
     @IBAction func CloseButtonPressed(_ sender: UIButton) {
