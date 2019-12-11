@@ -77,7 +77,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="bnn-Vo-PZi" secondAttribute="bottom" id="Ap2-U5-yfy"/>
                                             <constraint firstItem="bnn-Vo-PZi" firstAttribute="leading" secondItem="Yr3-lh-Bgw" secondAttribute="leading" id="B3u-gd-anY"/>
@@ -92,7 +92,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7HS-PR-B5P" firstAttribute="top" secondItem="3Pr-rq-hPh" secondAttribute="top" constant="5" id="juT-He-Fel"/>
                             <constraint firstItem="7HS-PR-B5P" firstAttribute="leading" secondItem="3Pr-rq-hPh" secondAttribute="leading" id="oEI-1Q-Q9G"/>

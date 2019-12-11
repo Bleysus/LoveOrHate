@@ -41,9 +41,50 @@ class SwipeTableViewController: UITableViewController {
         cell.itemTextLabel.text = itemsArray[indexPath.row].name
         cell.itemPerson.setBackgroundImage(UIImage(systemName: itemsArray[indexPath.row].image), for: .normal)
         //cell.itemTextLabel.font = UIFont(name: itemsArray[indexPath.row].font, size: 50)
-        let itemCoefficient = round(100 * (Float(itemsArray[indexPath.row].loves) / Float(itemsArray[indexPath.row].hates))) / 100
         
+        var itemCoefficient: Float = 0.0
+        if itemsArray[indexPath.row].hates != 0 {
+            itemCoefficient = round(100 * (Float(itemsArray[indexPath.row].loves) / Float(itemsArray[indexPath.row].hates))) / 100
+        } else {
+            itemCoefficient = 1
+        }
         cell.itemCoefficientLabel.text = String(itemCoefficient)
+        
+        
+        
+        if itemCoefficient >= 1 {
+            cell.itemHeartImage.tintColor = .loveColor
+            
+            cell.itemHeartImage.alpha = CGFloat(itemCoefficient / 5)
+        } else {
+            cell.itemHeartImage.tintColor = .hateColor
+            
+            switch itemCoefficient {
+            case _ where itemCoefficient < 0.2:
+                cell.itemHeartImage.alpha = 1
+            case 0.2..<0.3 :
+                cell.itemHeartImage.alpha = 0.9
+            case 0.3..<0.4 :
+                cell.itemHeartImage.alpha = 0.8
+            case 0.4..<0.5 :
+                cell.itemHeartImage.alpha = 0.7
+            case 0.2..<0.6 :
+                cell.itemHeartImage.alpha = 0.6
+            case 0.2..<0.7 :
+                cell.itemHeartImage.alpha = 0.5
+            case 0.2..<0.8 :
+                cell.itemHeartImage.alpha = 0.4
+            case 0.2..<0.9 :
+                cell.itemHeartImage.alpha = 0.3
+            case _ where itemCoefficient > 0.9:
+                cell.itemHeartImage.alpha = 0.2
+            default:
+                break
+            }
+            //cell.itemHeartImage.tintColor = .hateColor
+            //cell.itemHeartImage.alpha = CGFloat(itemCoefficient + 0.1)
+        }
+        
         
         cell.delegate = self
         return cell
@@ -103,8 +144,8 @@ extension SwipeTableViewController: SwipeTableViewCellDelegate {
 
 extension SwipeTableViewController: EditViewControllerDelegate {
     func fetchEditedData(data: CurrentLoveObject) {
-        itemsArray[data.currentIndexPath!].loves = data.currentLoves ?? 0
-        itemsArray[data.currentIndexPath!].hates = data.currentHates ?? 0
+        itemsArray[data.currentIndexPath!].loves = data.currentLoves ?? 1
+        itemsArray[data.currentIndexPath!].hates = data.currentHates ?? 1
         itemsArray[data.currentIndexPath!].image = data.currentImage ?? "person"
         itemsArray[data.currentIndexPath!].name = data.currentName ?? "Проведите влево для редактирования"
         tableView.reloadData()

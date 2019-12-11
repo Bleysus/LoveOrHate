@@ -48,8 +48,8 @@ class EditViewController: UIViewController {
         
         setTheme()
                 
-        hatesLabel.text = String(currentLoveObject.currentHates ?? 0)
-        lovesLabel.text = String(currentLoveObject.currentLoves ?? 0)
+        hatesLabel.text = String(currentLoveObject.currentHates ?? 1)
+        lovesLabel.text = String(currentLoveObject.currentLoves ?? 1)
         itemImage.image = UIImage(systemName: currentLoveObject.currentImage ?? "person")
         
         if currentLoveObject.currentName != "Проведите влево для редактирования" {
@@ -75,16 +75,16 @@ class EditViewController: UIViewController {
     @IBAction func loveChangerPressed(_ sender: UIButton) {
         switch sender.tag {
         case 10:
-            if Int(hatesLabel.text!) ?? 1 < 9999 {
+            if Int(hatesLabel.text!) ?? 1 < 999 {
                 hatesLabel.text = String(Int(hatesLabel.text!)! + 1) }
         case 11:
-            if Int(hatesLabel.text!) ?? 1 > 0 {
+            if Int(hatesLabel.text!) ?? 1 > 1 {
                 hatesLabel.text = String(Int(hatesLabel.text!)! - 1) }
         case 20:
-            if Int(lovesLabel.text!) ?? 1 < 9999 {
+            if Int(lovesLabel.text!) ?? 1 < 999 {
                 lovesLabel.text = String(Int(lovesLabel.text!)! + 1) }
         case 22:
-            if Int(lovesLabel.text!) ?? 1 > 0 {
+            if Int(lovesLabel.text!) ?? 1 > 1 {
                 lovesLabel.text = String(Int(lovesLabel.text!)! - 1) }
            
             
@@ -104,17 +104,17 @@ class EditViewController: UIViewController {
     @IBAction func DiscardButtonPressed(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            hatesLabel.text = "0"
+            hatesLabel.text = "1"
         case 2:
-            lovesLabel.text = "0"
+            lovesLabel.text = "1"
         default:
             break
         }
     }
     
     @IBAction func CloseButtonPressed(_ sender: UIButton) {
-        currentLoveObject.currentHates = Int(hatesLabel.text ?? "0")
-        currentLoveObject.currentLoves = Int(lovesLabel.text ?? "0")
+        currentLoveObject.currentHates = Int(hatesLabel.text ?? "1")
+        currentLoveObject.currentLoves = Int(lovesLabel.text ?? "1")
         currentLoveObject.currentName = editLoveTextField.text
             
         self.delegate?.fetchEditedData(data: currentLoveObject)        

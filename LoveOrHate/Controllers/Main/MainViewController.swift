@@ -10,9 +10,20 @@ import UIKit
 import SwipeCellKit
 
 
+
+
 class MainViewController: SwipeTableViewController {
+    
+    private func setTheme() {
+        //Set Colors
+        view.backgroundColor = .backgroudColor
+        
+        //-----
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTheme()
     }
 
     
@@ -40,7 +51,7 @@ class MainViewController: SwipeTableViewController {
     }
     
     @IBAction func addNewLove(_ sender: UIBarButtonItem) {
-        let newItem = (name: "Проведите влево для редактирования", image: "arrow.left", loves: 0, hates: 0, font: "Snell Roundhand")
+        let newItem = (name: "Проведите влево для редактирования", image: "arrow.left", loves: 1, hates: 1, font: "Snell Roundhand")
         itemsArray.append(newItem)
         tableView.reloadData()
     }
