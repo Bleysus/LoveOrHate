@@ -52,7 +52,7 @@ private struct LightTheme: ColorTheme {
         return UIColor(red: 0.13, green: 0.16, blue: 0.19, alpha: 1.0) //#222831  Almost black
     }
     var photoColor: UIColor {
-        return UIColor(red: 0.87, green: 0.89, blue: 0.94, alpha: 1.0) //#222831  Almost blue
+        return UIColor(red: 0.13, green: 0.16, blue: 0.55, alpha: 1.0) //#222831  dark blue
     }
     var cellBackgroudColor: UIColor {
         return UIColor(red: 0.87, green: 0.89, blue: 0.94, alpha: 1.0) //#222831  Almost blue

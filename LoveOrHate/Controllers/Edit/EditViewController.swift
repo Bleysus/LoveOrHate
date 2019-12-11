@@ -32,7 +32,7 @@ class EditViewController: UIViewController {
     
     private func setTheme() {
         view.backgroundColor = .backgroudColor
-        itemImage.tintColor = .loveColor
+        itemImage.tintColor = .photoColor
         lovesLabel.tintColor = .loveColor
         lovesPlusHeart.tintColor = .loveColor
         lovesMinusHeart.tintColor = .loveColor
@@ -48,8 +48,8 @@ class EditViewController: UIViewController {
         
         setTheme()
                 
-        hatesLabel.text = String(currentLoveObject.currentHates ?? 1)
-        lovesLabel.text = String(currentLoveObject.currentLoves ?? 1)
+        hatesLabel.text = String(currentLoveObject.currentHates ?? 0)
+        lovesLabel.text = String(currentLoveObject.currentLoves ?? 0)
         itemImage.image = UIImage(systemName: currentLoveObject.currentImage ?? "person")
         
         if currentLoveObject.currentName != "Проведите влево для редактирования" {
