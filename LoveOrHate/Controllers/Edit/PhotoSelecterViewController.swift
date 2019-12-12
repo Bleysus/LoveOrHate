@@ -46,3 +46,15 @@ class PhotoSelecterViewController: UICollectionViewController {
     }
     
 }
+
+extension UICollectionView {
+    @IBInspectable var backgroundImage: UIImage? {
+        get {
+            return nil
+        }
+        set {
+            backgroundView = UIImageView(image: newValue)
+            backgroundView?.alpha = 0.35
+        }
+    }
+}
