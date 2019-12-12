@@ -24,8 +24,8 @@ class SwipeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 80.0
-        tableView.separatorStyle = .singleLine
+        //tableView.rowHeight = 80.0
+        tableView.separatorStyle = .none
         
         tableView.register(UINib(nibName: "ItemsTableViewCell", bundle: nil), forCellReuseIdentifier: K.itemsTableViewCellIdentifier)
     }

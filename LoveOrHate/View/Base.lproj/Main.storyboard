@@ -391,27 +391,33 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3e-kT-n31">
-                                                <rect key="frame" x="190" y="12.5" width="40" height="35.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="HVD-IS-DQX"/>
-                                                    <constraint firstAttribute="height" constant="40" id="L6C-92-Xix"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="150"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" backgroundImage="pencil" catalog="system"/>
                                                 <connections>
                                                     <segue destination="m9d-3U-xk0" kind="presentation" identifier="PhotoSelecterSegue" modalPresentationStyle="fullScreen" id="6aO-3S-0aZ"/>
                                                 </connections>
                                             </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c36-RD-XSs">
+                                                <rect key="frame" x="190" y="2.5" width="50" height="45.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="pcB-9C-JQv"/>
+                                                    <constraint firstAttribute="height" constant="50" id="sU3-9Q-EOl"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="tintColor" red="0.1333130002" green="0.1568968594" blue="0.54502791169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="Cm7-NC-nOL"/>
                                             <constraint firstAttribute="width" constant="240" id="IoL-24-WVy"/>
-                                            <constraint firstAttribute="trailing" secondItem="b3e-kT-n31" secondAttribute="trailing" constant="10" id="NkL-pP-rIf"/>
+                                            <constraint firstAttribute="trailing" secondItem="c36-RD-XSs" secondAttribute="trailing" id="Nvz-Kk-NIm"/>
                                             <constraint firstItem="6w5-9w-D3s" firstAttribute="centerX" secondItem="1RK-ti-WiK" secondAttribute="centerX" id="RB0-Li-qt4"/>
-                                            <constraint firstItem="b3e-kT-n31" firstAttribute="top" secondItem="1RK-ti-WiK" secondAttribute="top" constant="10" id="eA1-2o-xke"/>
+                                            <constraint firstAttribute="bottom" secondItem="b3e-kT-n31" secondAttribute="bottom" id="VhW-P5-xkH"/>
                                             <constraint firstItem="6w5-9w-D3s" firstAttribute="centerY" secondItem="1RK-ti-WiK" secondAttribute="centerY" id="eVv-pc-QS5"/>
+                                            <constraint firstItem="b3e-kT-n31" firstAttribute="top" secondItem="1RK-ti-WiK" secondAttribute="top" id="hVB-Gg-iPj"/>
+                                            <constraint firstAttribute="trailing" secondItem="b3e-kT-n31" secondAttribute="trailing" id="hrw-Xy-VuA"/>
+                                            <constraint firstItem="c36-RD-XSs" firstAttribute="top" secondItem="1RK-ti-WiK" secondAttribute="top" id="k8G-6E-Wzc"/>
+                                            <constraint firstItem="b3e-kT-n31" firstAttribute="leading" secondItem="1RK-ti-WiK" secondAttribute="leading" id="vq8-6f-hHQ"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXZ-Ji-GWl">
@@ -570,7 +576,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adq-Dz-dtr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="-97"/>
+            <point key="canvasLocation" x="1432.5" y="-97.183098591549296"/>
         </scene>
     </scenes>
     <resources>
