@@ -26,7 +26,8 @@ class LoveChangerViewController: UIViewController {
     
     private func setTheme() {
         //Set Colors
-        view.backgroundColor = .backgroudColor
+        //view.backgroundColor = .backgroudColor
+        view.backgroundColor = .systemBackground
         //view.viewWithTag(1)?.backgroundColor = .red
         itemImage.tintColor = .photoColor
         lovesLabel.tintColor = .loveColor

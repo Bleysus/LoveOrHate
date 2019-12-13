@@ -20,6 +20,7 @@ class ItemsTableViewCell: SwipeTableViewCell {
     @IBOutlet weak var itemHateImage: UIImageView!
     @IBOutlet weak var itemHateValueLabel: UILabel!
     
+    @IBOutlet weak var cellDividerLine: UIImageView!
     
     @IBOutlet weak var photoStack: UIStackView!
     @IBOutlet weak var loveStack: UIStackView!
@@ -28,14 +29,12 @@ class ItemsTableViewCell: SwipeTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let view:UIView = UIView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
-        view.layer.borderWidth = 5
-        view.layer.borderColor = .init(srgbRed: 0.13, green: 0.16, blue: 0.55, alpha: 1.0)
-        view.clipsToBounds = true
-        view.layer.cornerRadius = 10
-        
-        loveStack.addSubview(view)
-        
+//        let view:UIView = UIView(frame: CGRect(x: 0, y: 1, width: 78, height: 78))
+//        view.layer.borderWidth = 2
+//        view.layer.borderColor = .init(srgbRed: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+//        view.clipsToBounds = true
+//        view.layer.cornerRadius = 10
+//        loveStack.addSubview(view)        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

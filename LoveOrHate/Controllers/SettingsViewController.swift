@@ -36,7 +36,7 @@ class SettingsViewController: UIViewController {
             K.isDarkTheme = settingsSwitch.isOn // настройка темы
         default:
             break
-        }
+        }  
     }
     
     @IBAction func settinsButtonPressed(_ sender: UIButton) {

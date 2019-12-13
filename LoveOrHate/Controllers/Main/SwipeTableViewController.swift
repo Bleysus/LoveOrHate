@@ -9,8 +9,6 @@
 import UIKit
 import SwipeCellKit
 
-
-//class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
 class SwipeTableViewController: UITableViewController {
 
     var currentLoveObject = CurrentLoveObject()
@@ -25,7 +23,7 @@ class SwipeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //tableView.rowHeight = 80.0
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
         
         tableView.register(UINib(nibName: "ItemsTableViewCell", bundle: nil), forCellReuseIdentifier: K.itemsTableViewCellIdentifier)
     }
@@ -40,24 +38,45 @@ class SwipeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.itemsTableViewCellIdentifier, for: indexPath) as! ItemsTableViewCell
         cell.itemTextLabel.text = itemsArray[indexPath.row].name
         cell.itemPerson.setBackgroundImage(UIImage(systemName: itemsArray[indexPath.row].image), for: .normal)
-        //cell.itemTextLabel.font = UIFont(name: itemsArray[indexPath.row].font, size: 50)
-        
-//        var itemCoefficient: Float = 0.0
-//        if itemsArray[indexPath.row].hates != 0 {
-//            itemCoefficient = round(100 * (Float(itemsArray[indexPath.row].loves) / Float(itemsArray[indexPath.row].hates))) / 100
-//        } else {
-//            itemCoefficient = 1
-//        }
-        
-        //cell.itemLoveValueLabel.text = String(itemCoefficient)
-        
         cell.itemHeartImage.tintColor = .loveColor
         cell.itemLoveValueLabel.textColor = .loveColor
         cell.itemLoveValueLabel.text = String(itemsArray[indexPath.row].loves)
         
-        cell.itemHateImage.tintColor = .hateColor
-        cell.itemHateValueLabel.textColor = .hateColor
+//        cell.itemHateImage.tintColor = .hateColor
+//        cell.itemHateValueLabel.textColor = .hateColor
         cell.itemHateValueLabel.text = String(itemsArray[indexPath.row].hates)
+        //border
+        let view:UIView = UIView(frame: CGRect(x: 0, y: 1, width: 78, height: 78))
+        view.layer.borderWidth = 2
+        
+        switch K.isDarkTheme {
+            case true:
+                view.layer.borderColor = .init(srgbRed: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            case false:
+                view.layer.borderColor = .init(srgbRed: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            }
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 10
+        cell.loveStack.addSubview(view)
+        
+        //
+        switch K.isDarkTheme {
+        case true:
+            cell.cellDividerLine.backgroundColor = .white
+            cell.itemTextLabel.textColor = .white
+            cell.itemPerson.backgroundColor = .white
+            cell.itemPerson.tintColor = .black
+            cell.itemHateImage.tintColor = .white
+            cell.itemHateValueLabel.textColor = .white
+            
+        case false:
+            cell.cellDividerLine.backgroundColor = .black
+            cell.itemTextLabel.textColor = .black
+            cell.itemPerson.backgroundColor = .black
+            cell.itemPerson.tintColor = .white
+            cell.itemHateImage.tintColor = .black
+            cell.itemHateValueLabel.textColor = .black
+        }
         
         cell.delegate = self
         return cell

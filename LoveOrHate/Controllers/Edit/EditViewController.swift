@@ -31,7 +31,9 @@ class EditViewController: UIViewController {
     @IBOutlet weak var editLoveTextField: UITextField!
     
     private func setTheme() {
-        view.backgroundColor = .backgroudColor
+        //view.backgroundColor = .backgroudColor
+        view.backgroundColor = .systemBackground
+        
         itemImage.tintColor = .photoColor
         lovesLabel.tintColor = .loveColor
         lovesPlusHeart.tintColor = .loveColor

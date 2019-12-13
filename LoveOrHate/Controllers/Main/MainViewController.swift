@@ -14,9 +14,11 @@ import SwipeCellKit
 
 class MainViewController: SwipeTableViewController {
     
+    @IBOutlet var loveTableView: UITableView!
+    
     private func setTheme() {
         //Set Colors
-        view.backgroundColor = .backgroudColor
+        view.backgroundColor = .systemBackground
         
         //-----
     }
@@ -25,7 +27,25 @@ class MainViewController: SwipeTableViewController {
         super.viewDidLoad()
         setTheme()
     }
-
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+        
+        switch K.isDarkTheme {
+        case true:
+            loveTableView.backgroundImage = UIImage(named: "Wallpaper-Dark")
+            //UINavigationBar.appearance().tintColor = .white
+            UINavigationBar.appearance().backgroundColor = .white
+           
+            
+        case false:
+            loveTableView.backgroundImage = UIImage(named: "Wallpaper-Light")
+            //UINavigationBar.appearance().tintColor = .black
+            UINavigationBar.appearance().backgroundColor = .black
+        }
+    }
     
     // MARK: - Table view data source
    
@@ -74,9 +94,26 @@ extension UITableView {
             return nil
         }
         set {
-            backgroundView = UIImageView(image: newValue)
-            backgroundView?.alpha = 0.35
+            backgroundView = UIImageView(image: newValue)            
         }
     }
 }
 
+extension UINavigationBar {
+    class func setupAppearance() {
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = .black
+            appearance.titleTextAttributes = textAttributes
+            appearance.largeTitleTextAttributes = textAttributes
+            
+            //self.appearance().standartAppearance = appearance
+            
+            
+        } else {
+            
+            
+        }
+    }
+}
