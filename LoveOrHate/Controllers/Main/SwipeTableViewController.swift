@@ -46,7 +46,7 @@ class SwipeTableViewController: UITableViewController {
 //        cell.itemHateValueLabel.textColor = .hateColor
         cell.itemHateValueLabel.text = String(itemsArray[indexPath.row].hates)
         //border
-        let view:UIView = UIView(frame: CGRect(x: 0, y: 2, width: 58, height: 56))
+        let view:UIView = UIView(frame: CGRect(x: 0, y: 2, width: 60, height: 56))
         view.layer.borderWidth = 2
         
         switch K.isDarkTheme {
