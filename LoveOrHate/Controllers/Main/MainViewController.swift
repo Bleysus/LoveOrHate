@@ -59,15 +59,13 @@ class MainViewController: SwipeTableViewController {
         currentLoveObject.currentHates = itemsArray[index].hates
         currentLoveObject.currentIndexPath = index
         currentLoveObject.currentImage = itemsArray[index].image
-
+       
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let myAlert = storyboard.instantiateViewController(withIdentifier: K.vcLoveChanger) as! LoveChangerViewController
-        myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        myAlert.currentLoveObject = currentLoveObject
-        myAlert.delegate = self
-        self.present(myAlert, animated: true, completion: nil)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: K.vcLoveChanger) as! LoveChangerViewController
+        vc.currentLoveObject = currentLoveObject
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func addNewLove(_ sender: UIBarButtonItem) {

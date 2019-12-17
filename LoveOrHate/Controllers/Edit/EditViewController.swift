@@ -32,7 +32,7 @@ class EditViewController: UIViewController {
     
     private func setTheme() {
         //view.backgroundColor = .backgroudColor
-        view.backgroundColor = .systemBackground
+        //view.backgroundColor = .systemBackground
         
         itemImage.tintColor = .photoColor
         lovesLabel.tintColor = .loveColor
@@ -104,14 +104,26 @@ class EditViewController: UIViewController {
     
     
     @IBAction func DiscardButtonPressed(_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
-            hatesLabel.text = "1"
-        case 2:
-            lovesLabel.text = "1"
-        default:
-            break
-        }
+        
+        let alert = UIAlertController(title: "Внимание!", message: "Обнулить значения?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Нет", style: .default, handler: { action in
+              
+        
+        }))
+        alert.addAction(UIAlertAction(title: "Да", style: .destructive, handler: { action in
+              switch sender.tag {
+              case 1:
+                self.hatesLabel.text = "0"
+              case 2:
+                self.lovesLabel.text = "0"
+              default:
+                  break
+              }
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
     }
     
     @IBAction func CloseButtonPressed(_ sender: UIButton) {

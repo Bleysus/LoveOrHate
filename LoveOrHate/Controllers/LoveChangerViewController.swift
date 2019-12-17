@@ -27,7 +27,7 @@ class LoveChangerViewController: UIViewController {
     private func setTheme() {
         //Set Colors
         //view.backgroundColor = .backgroudColor
-        view.backgroundColor = .systemBackground
+        //view.backgroundColor = .systemBackground
         //view.viewWithTag(1)?.backgroundColor = .red
         itemImage.tintColor = .photoColor
         lovesLabel.tintColor = .loveColor
@@ -40,10 +40,7 @@ class LoveChangerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setTheme()
-
-        
         
         hatesLabel.text = String(currentLoveObject.currentHates ?? 0)
         lovesLabel.text = String(currentLoveObject.currentLoves ?? 0)
@@ -79,6 +76,7 @@ class LoveChangerViewController: UIViewController {
     
     func exitLoveChanger() {
         self.delegate?.fetchChangedData(data: currentLoveObject)
+        //self.view.removeFromSuperview()
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -96,13 +96,17 @@ class SwipeTableViewController: UITableViewController {
             currentLoveObject.currentImage = itemsArray[indexPath.row].image
             currentLoveObject.currentName = itemsArray[indexPath.row].name
                             //----
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let myAlert = storyboard.instantiateViewController(withIdentifier: K.vcEditLove) as! EditViewController
-            myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-            myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-            myAlert.currentLoveObject = currentLoveObject
-            myAlert.delegate = self
-            self.present(myAlert, animated: true, completion: nil)
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: K.vcEditLove) as! EditViewController
+            vc.currentLoveObject = currentLoveObject
+            vc.delegate = self
+            self.present(vc, animated: true, completion: nil)
+            
+            
+            
+            
+            
+            
         case "Delete":
             itemsArray.remove(at: indexPath.row)
         default:
