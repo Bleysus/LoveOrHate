@@ -15,6 +15,7 @@ struct K {
         
     static let vcLoveChanger = "LoveChanger"
     static let vcPhotoChanger = "PhotoChanger"
+    static let vcItemImageSelecter = "ItemImageSelecter"
     static let vcAddLove = "AddLove"
     static let vcEditLove = "EditLove"
     static let vcMainViewController = "MainViewController"

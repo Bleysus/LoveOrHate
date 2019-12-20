@@ -29,7 +29,9 @@ class LoveChangerViewController: UIViewController {
         //view.backgroundColor = .backgroudColor
         //view.backgroundColor = .systemBackground
         //view.viewWithTag(1)?.backgroundColor = .red
-        itemImage.tintColor = .photoColor
+//        itemImage.tintColor = .photoColor
+        itemImage.tintColor = .hateColor
+        
         lovesLabel.tintColor = .loveColor
         lovesPlusHeart.tintColor = .loveColor
         hatesLabel.tintColor = .hateColor

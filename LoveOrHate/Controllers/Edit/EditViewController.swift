@@ -34,7 +34,8 @@ class EditViewController: UIViewController {
         //view.backgroundColor = .backgroudColor
         //view.backgroundColor = .systemBackground
         
-        itemImage.tintColor = .photoColor
+        //itemImage.tintColor = .photoColor
+        itemImage.tintColor = .hateColor
         lovesLabel.tintColor = .loveColor
         lovesPlusHeart.tintColor = .loveColor
         lovesMinusHeart.tintColor = .loveColor
@@ -60,19 +61,12 @@ class EditViewController: UIViewController {
             editLoveTextField.placeholder = "Введите название для любви"
         }
         
-        
-        
-        
         //скрыть клаву по тапу
         let tapScreen = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapScreen.cancelsTouchesInView = false
         view.addGestureRecognizer(tapScreen)
         //-----
-        
-        
     }
-    
-    
     
     @IBAction func loveChangerPressed(_ sender: UIButton) {
         switch sender.tag {
@@ -88,29 +82,24 @@ class EditViewController: UIViewController {
         case 22:
             if Int(lovesLabel.text!) ?? 1 > 1 {
                 lovesLabel.text = String(Int(lovesLabel.text!)! - 1) }
-           
-            
         default:
             break
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.PhotoSelecterSegue {
-            let vc = segue.destination as! PhotoSelecterViewController
-            vc.delegate = self
-        }
-    }
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == K.PhotoSelecterSegue {
+//            let vc = segue.destination as! PhotoSelecterViewController
+//            vc.delegate = self
+//        }
+//    }
     
     @IBAction func DiscardButtonPressed(_ sender: UIButton) {
         
         let alert = UIAlertController(title: "Внимание!", message: "Обнулить значения?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Нет", style: .default, handler: { action in
-              
-        
+        alert.addAction(UIAlertAction(title: "Отменить", style: .default, handler: { action in
         }))
-        alert.addAction(UIAlertAction(title: "Да", style: .destructive, handler: { action in
+        alert.addAction(UIAlertAction(title: "Обнулить", style: .destructive, handler: { action in
               switch sender.tag {
               case 1:
                 self.hatesLabel.text = "0"
@@ -120,10 +109,7 @@ class EditViewController: UIViewController {
                   break
               }
         }))
-        
         self.present(alert, animated: true, completion: nil)
-        
-        
     }
     
     @IBAction func CloseButtonPressed(_ sender: UIButton) {
@@ -135,18 +121,21 @@ class EditViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @objc func dismissKeyboard(sender: UITapGestureRecognizer) {
-        view.endEditing(true)
+    
+    @IBAction func ItemSelectButtonPressed(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: K.vcItemImageSelecter) as! ItemImageSelecterViewController
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
+        
     }
     
     
-}
-
-
-extension EditViewController: PhotoSelecterViewControllerDelegate {
-    func fetchImage(image: String) {
-        itemImage.image = UIImage(systemName: image)
-        currentLoveObject.currentImage = image
+    
+    
+    @objc func dismissKeyboard(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
 }
 
@@ -154,8 +143,11 @@ extension EditViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
     }
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        view.endEditing(true)
-//    }
-    
+}
+
+extension EditViewController: ItemImageSelecterViewControllerDelegate {
+    func fetchImage(image: String) {
+        itemImage.image = UIImage(systemName: image)
+        currentLoveObject.currentImage = image
+    }
 }
