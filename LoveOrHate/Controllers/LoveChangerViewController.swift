@@ -18,6 +18,8 @@ class LoveChangerViewController: UIViewController {
     
     var currentLoveObject = CurrentLoveObject()
     
+    @IBOutlet weak var viewForFrame: UIView!
+    @IBOutlet weak var viewForStack: UIView!
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var lovesLabel: UILabel!
     @IBOutlet weak var hatesLabel: UILabel!
@@ -25,18 +27,35 @@ class LoveChangerViewController: UIViewController {
     @IBOutlet weak var lovesPlusHeart: UIButton!
     
     private func setTheme() {
-        //Set Colors
-        //view.backgroundColor = .backgroudColor
-        //view.backgroundColor = .systemBackground
-        //view.viewWithTag(1)?.backgroundColor = .red
-//        itemImage.tintColor = .photoColor
-        itemImage.tintColor = .hateColor
-        
-        lovesLabel.tintColor = .loveColor
-        lovesPlusHeart.tintColor = .loveColor
-        hatesLabel.tintColor = .hateColor
-        hatesPlusHeart.tintColor = .hateColor
-        //-----
+        let viewBorder:UIView = UIView(frame: CGRect(x: 0, y: 0, width: 230, height: 425))
+        viewBorder.layer.borderWidth = 2
+        viewBorder.clipsToBounds = true
+        viewBorder.layer.cornerRadius = 5
+                
+        switch K.isDarkTheme {
+        case true:
+            viewBorder.layer.borderColor = .init(srgbRed: 1, green: 1, blue: 1, alpha: 1.0)
+            
+            view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
+            viewForStack.backgroundColor = .black
+            itemImage.tintColor = .white
+            lovesLabel.tintColor = .loveColor
+            lovesPlusHeart.tintColor = .loveColor
+            hatesLabel.textColor = .white
+            hatesPlusHeart.tintColor = .white
+        case false:
+            viewBorder.layer.borderColor = .init(srgbRed: 0, green: 0, blue: 0, alpha: 1.0)
+            
+            view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
+            viewForStack.backgroundColor = .white
+            itemImage.tintColor = .black            
+            lovesLabel.tintColor = .loveColor
+            lovesPlusHeart.tintColor = .loveColor
+            hatesLabel.textColor = .black
+            hatesPlusHeart.tintColor = .black
+
+        }
+        viewForFrame.addSubview(viewBorder)
     }
     
     

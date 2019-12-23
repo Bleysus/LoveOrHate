@@ -22,7 +22,6 @@ class SwipeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //tableView.rowHeight = 80.0
         tableView.separatorStyle = .singleLine
         
         tableView.register(UINib(nibName: "ItemsTableViewCell", bundle: nil), forCellReuseIdentifier: K.itemsTableViewCellIdentifier)
@@ -42,8 +41,6 @@ class SwipeTableViewController: UITableViewController {
         cell.itemLoveValueLabel.textColor = .loveColor
         cell.itemLoveValueLabel.text = String(itemsArray[indexPath.row].loves)
         
-//        cell.itemHateImage.tintColor = .hateColor
-//        cell.itemHateValueLabel.textColor = .hateColor
         cell.itemHateValueLabel.text = String(itemsArray[indexPath.row].hates)
         //border
         let view:UIView = UIView(frame: CGRect(x: 0, y: 2, width: 60, height: 56))

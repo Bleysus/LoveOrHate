@@ -13,10 +13,35 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var autoCloseLoveViewSwitch: UISwitch!
     @IBOutlet weak var themeSwitch: UISwitch!
+    @IBOutlet var viewBack: UIView!
+    @IBOutlet var textSettings: [UILabel]!
+    @IBOutlet weak var textLoveorHate: UILabel!
+    
+    private func setTheme() {
+        
+                
+        switch K.isDarkTheme {
+        case true:
+            viewBack.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            for label in textSettings {
+                label.textColor = .white
+            }
+            textLoveorHate.textColor = .white
+            
+        case false:
+            viewBack.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            for label in textSettings {
+                label.textColor = .black
+            }
+            textLoveorHate.textColor = .black
+
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTheme()
         
         autoCloseLoveViewSwitch.isOn = K.isAutoClosingLoveChanger
         themeSwitch.isOn = K.isDarkTheme
@@ -36,7 +61,8 @@ class SettingsViewController: UIViewController {
             K.isDarkTheme = settingsSwitch.isOn // настройка темы
         default:
             break
-        }  
+        }
+        setTheme()
     }
     
     @IBAction func settinsButtonPressed(_ sender: UIButton) {

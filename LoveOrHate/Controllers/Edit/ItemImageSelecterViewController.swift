@@ -84,15 +84,30 @@ class ItemImageSelecterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+                
+                
         collectionView.delegate = self
         collectionView.dataSource = self
         
         view.addSubview(collectionView)
-        collectionView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0)
-        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        //collectionView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0)
+        collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+        
+        
+        switch K.isDarkTheme {
+        case true:
+            view.backgroundColor = .black
+            collectionView.backgroundColor = .black
+            
+        case false:
+            view.backgroundColor = .white
+            collectionView.backgroundColor = .white
+        }
+                
     }
 }
 
@@ -120,8 +135,21 @@ extension ItemImageSelecterViewController: UICollectionViewDelegateFlowLayout, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCell
-        cell.backgroundColor = .black
-        cell.tintColor = .white
+        
+        switch K.isDarkTheme {
+        case true:
+            cell.backgroundColor = .white
+            cell.tintColor = .black
+            
+            
+        case false:
+            cell.backgroundColor = .black
+            cell.tintColor = .white
+        }
+                
+        
+//        cell.backgroundColor = .black
+//        cell.tintColor = .white
         cell.layer.cornerRadius = 10
         cell.data = self.data[indexPath.row]
         return cell
