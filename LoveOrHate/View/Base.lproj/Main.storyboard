@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" title="Love or Hate" id="0y8-mQ-zrY">
                         <barButtonItem key="leftBarButtonItem" title="Настройки" id="Aot-Ju-43a">
                             <connections>
-                                <segue destination="Ytl-4M-ZhS" kind="presentation" modalPresentationStyle="overCurrentContext" id="907-B9-tlE"/>
+                                <segue destination="Ytl-4M-ZhS" kind="presentation" modalPresentationStyle="fullScreen" id="907-B9-tlE"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FnV-qH-A7S">
