@@ -72,6 +72,10 @@ class MainViewController: SwipeTableViewController {
         let newItem = (name: "Проведите влево для редактирования", image: "arrow.left", loves: 0, hates: 0, font: "Snell Roundhand")
         itemsArray.append(newItem)
         tableView.reloadData()
+        let numberOfSections = tableView.numberOfSections
+        let numberOfRows = tableView.numberOfRows(inSection: numberOfSections-1)
+        let indexPath = IndexPath(row: numberOfRows-1, section: numberOfSections-1)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
 }

@@ -26,6 +26,7 @@
 		F1DCB6A8238449BA00E53C36 /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB6A6238449BA00E53C36 /* ItemsTableViewCell.swift */; };
 		F1DCB6A9238449BA00E53C36 /* ItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1DCB6A7238449BA00E53C36 /* ItemsTableViewCell.xib */; };
 		F1DCB6AB23844EAF00E53C36 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB6AA23844EAF00E53C36 /* Constants.swift */; };
+		F1E514EE23B1BBE500B22CB7 /* EmptyLoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E514ED23B1BBE500B22CB7 /* EmptyLoveObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		F1DCB6A6238449BA00E53C36 /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
 		F1DCB6A7238449BA00E53C36 /* ItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsTableViewCell.xib; sourceTree = "<group>"; };
 		F1DCB6AA23844EAF00E53C36 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F1E514ED23B1BBE500B22CB7 /* EmptyLoveObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyLoveObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				F1DCB6AA23844EAF00E53C36 /* Constants.swift */,
 				F107742423965BED00D79B8E /* CurrentLoveObject.swift */,
+				F1E514ED23B1BBE500B22CB7 /* EmptyLoveObject.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E514EE23B1BBE500B22CB7 /* EmptyLoveObject.swift in Sources */,
 				F107742523965BED00D79B8E /* CurrentLoveObject.swift in Sources */,
 				F10774292398B2F000D79B8E /* ColorScheme.swift in Sources */,
 				F10774142394FC3B00D79B8E /* SwipeTableViewController.swift in Sources */,

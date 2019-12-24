@@ -17,6 +17,8 @@ class EditViewController: UIViewController {
     var delegate: EditViewControllerDelegate?
     
     var currentLoveObject = CurrentLoveObject()
+    let emptyLoveObject = EmptyLoveObject()
+    
     
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var penImage: UIImageView!
@@ -94,7 +96,7 @@ class EditViewController: UIViewController {
         lovesLabel.text = String(currentLoveObject.currentLoves ?? 0)
         itemImage.image = UIImage(systemName: currentLoveObject.currentImage ?? "person")
         
-        if currentLoveObject.currentName != "Проведите влево для редактирования" {
+        if (currentLoveObject.currentName != "Проведите влево для редактирования") && (!emptyLoveObject.text.contains(currentLoveObject.currentName ?? "")) {
             editLoveTextField.text = currentLoveObject.currentName
         } else {
             editLoveTextField.placeholder = "Введите название для любви"
@@ -154,7 +156,13 @@ class EditViewController: UIViewController {
     @IBAction func CloseButtonPressed(_ sender: UIButton) {
         currentLoveObject.currentHates = Int(hatesLabel.text ?? "1")
         currentLoveObject.currentLoves = Int(lovesLabel.text ?? "1")
-        currentLoveObject.currentName = editLoveTextField.text
+        
+        if (editLoveTextField.text != "") {
+            currentLoveObject.currentName = editLoveTextField.text
+        } else if !emptyLoveObject.text.contains(currentLoveObject.currentName ?? "") {
+            let random = Int(arc4random_uniform(UInt32(emptyLoveObject.text.count)))
+            currentLoveObject.currentName = emptyLoveObject.text[random]
+        }
             
         self.delegate?.fetchEditedData(data: currentLoveObject)        
         self.dismiss(animated: true, completion: nil)

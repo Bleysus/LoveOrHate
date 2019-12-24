@@ -27,6 +27,8 @@ class SettingsViewController: UIViewController {
                 label.textColor = .white
             }
             textLoveorHate.textColor = .white
+            UINavigationBar.appearance().backgroundColor = .black
+            UINavigationBar.appearance().tintColor = .black
             
         case false:
             viewBack.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
@@ -34,13 +36,15 @@ class SettingsViewController: UIViewController {
                 label.textColor = .black
             }
             textLoveorHate.textColor = .black
-
+            UINavigationBar.appearance().backgroundColor = .white
+            UINavigationBar.appearance().tintColor = .white
         }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         setTheme()
         
         autoCloseLoveViewSwitch.isOn = K.isAutoClosingLoveChanger
@@ -64,10 +68,10 @@ class SettingsViewController: UIViewController {
         }
         setTheme()
     }
-    
-    @IBAction func settinsButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func settingsButtonPressed(_ sender: UIBarButtonItem) {
+//        //super.dismiss(animated: true, completion: nil)
+//        self.navigationController?.popToRootViewController(animated: true)
+//    }
     
     @IBAction func feedbackPressed(_ sender: UIButton) {
         switch sender.tag {

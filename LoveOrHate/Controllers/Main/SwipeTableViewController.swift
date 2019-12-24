@@ -100,10 +100,6 @@ class SwipeTableViewController: UITableViewController {
             self.present(vc, animated: true, completion: nil)
             
             
-            
-            
-            
-            
         case "Delete":
             itemsArray.remove(at: indexPath.row)
         default:

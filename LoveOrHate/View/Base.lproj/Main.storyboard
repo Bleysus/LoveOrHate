@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" title="Love or Hate" id="0y8-mQ-zrY">
                         <barButtonItem key="leftBarButtonItem" title="Настройки" id="Aot-Ju-43a">
                             <connections>
-                                <segue destination="Ytl-4M-ZhS" kind="presentation" modalPresentationStyle="fullScreen" id="907-B9-tlE"/>
+                                <segue destination="Ytl-4M-ZhS" kind="show" id="907-B9-tlE"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FnV-qH-A7S">
@@ -214,11 +214,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="no0-Rf-FfY">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-Hf-14F">
-                                <rect key="frame" x="15" y="70" width="290" height="87"/>
+                                <rect key="frame" x="15" y="59" width="290" height="87"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WeI-17-Nqz" userLabel="Stack View Switch 1">
                                         <rect key="frame" x="0.0" y="0.0" width="268" height="31"/>
@@ -309,32 +309,24 @@
                                     <constraint firstAttribute="trailing" secondItem="Q91-cx-3hz" secondAttribute="trailing" constant="15" id="12c-7h-nrL"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xn4-Id-2uu">
-                                <rect key="frame" x="90" y="20" width="140" height="30"/>
-                                <state key="normal" title="Закрыть настройки"/>
-                                <connections>
-                                    <action selector="settinsButtonPressed:" destination="Ytl-4M-ZhS" eventType="touchUpInside" id="tgk-rQ-FeH"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ChX-Hf-14F" firstAttribute="leading" secondItem="Rvl-uI-bzb" secondAttribute="leading" constant="15" id="87M-h7-mCg"/>
                             <constraint firstAttribute="trailing" secondItem="3t4-Km-WNc" secondAttribute="trailing" constant="15" id="GWj-Mo-z8j"/>
                             <constraint firstItem="Rvl-uI-bzb" firstAttribute="trailing" secondItem="ChX-Hf-14F" secondAttribute="trailing" constant="15" id="N9y-sa-4dy"/>
-                            <constraint firstItem="Xn4-Id-2uu" firstAttribute="top" secondItem="Rvl-uI-bzb" secondAttribute="top" constant="20" id="OB1-ea-qIs"/>
                             <constraint firstItem="Rvl-uI-bzb" firstAttribute="bottom" secondItem="no0-Rf-FfY" secondAttribute="bottom" id="OVK-ey-u7L"/>
-                            <constraint firstItem="ChX-Hf-14F" firstAttribute="top" secondItem="Xn4-Id-2uu" secondAttribute="bottom" constant="20" id="YcR-H5-XDb"/>
-                            <constraint firstItem="Xn4-Id-2uu" firstAttribute="centerX" secondItem="87w-kj-F0Z" secondAttribute="centerX" id="a09-QJ-plW"/>
                             <constraint firstItem="Rvl-uI-bzb" firstAttribute="bottom" secondItem="3t4-Km-WNc" secondAttribute="bottom" constant="15" id="hrW-Qg-jAr"/>
                             <constraint firstItem="3t4-Km-WNc" firstAttribute="leading" secondItem="87w-kj-F0Z" secondAttribute="leading" constant="15" id="r9b-Ld-xBR"/>
                             <constraint firstItem="no0-Rf-FfY" firstAttribute="leading" secondItem="Rvl-uI-bzb" secondAttribute="leading" id="s5x-Br-sLm"/>
                             <constraint firstItem="no0-Rf-FfY" firstAttribute="top" secondItem="Rvl-uI-bzb" secondAttribute="top" id="voY-99-X1t"/>
+                            <constraint firstItem="ChX-Hf-14F" firstAttribute="top" secondItem="Rvl-uI-bzb" secondAttribute="top" constant="15" id="wFY-Mp-FkB"/>
                             <constraint firstItem="Rvl-uI-bzb" firstAttribute="trailing" secondItem="no0-Rf-FfY" secondAttribute="trailing" id="zIg-uh-q73"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rvl-uI-bzb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0jO-w3-hxN"/>
+                    <navigationItem key="navigationItem" id="HtH-T9-Pwo"/>
                     <connections>
                         <outlet property="autoCloseLoveViewSwitch" destination="8li-Rq-CUN" id="QdS-ov-aEX"/>
                         <outlet property="textLoveorHate" destination="Q91-cx-3hz" id="Pgy-Bd-quN"/>
