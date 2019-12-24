@@ -102,6 +102,7 @@ class SwipeTableViewController: UITableViewController {
             
         case "Delete":
             itemsArray.remove(at: indexPath.row)
+            
         default:
             break
         }
