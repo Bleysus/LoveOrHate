@@ -453,7 +453,8 @@
 			baseConfigurationReference = 6FB568E6212DCB4BFCC84FF4 /* Pods-LoveOrHate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ELERY6AH4S;
 				INFOPLIST_FILE = "$(SRCROOT)/LoveOrHate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -462,7 +463,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bleysus.LoveOrHate;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LoveOrHate;
+				PROVISIONING_PROFILE_SPECIFIER = "iOS development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -473,7 +475,8 @@
 			baseConfigurationReference = 3EE2D8EDEE8B87CDA5F0D948 /* Pods-LoveOrHate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ELERY6AH4S;
 				INFOPLIST_FILE = "$(SRCROOT)/LoveOrHate/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -482,7 +485,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bleysus.LoveOrHate;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LoveOrHate;
+				PROVISIONING_PROFILE_SPECIFIER = "iOS development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
