@@ -18,6 +18,8 @@
 		F11F9C2D23ACBFCC00353FDA /* ItemImageSelecterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F9C2C23ACBFCC00353FDA /* ItemImageSelecterViewController.swift */; };
 		F133E58623870211002FE0F7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F133E58523870211002FE0F7 /* Launch Screen.storyboard */; };
 		F133E588238702BA002FE0F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F133E587238702BA002FE0F7 /* Default-568h@2x.png */; };
+		F13D219C23DED01100391A72 /* DataModelLoves.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F13D219A23DED01100391A72 /* DataModelLoves.xcdatamodeld */; };
+		F13D219F23DED2D000391A72 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13D219E23DED2D000391A72 /* DataBase.swift */; };
 		F1DCB68A23843EB500E53C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB68923843EB500E53C36 /* AppDelegate.swift */; };
 		F1DCB68C23843EB500E53C36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */; };
 		F1DCB69123843EB500E53C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1DCB68F23843EB500E53C36 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		F11F9C2C23ACBFCC00353FDA /* ItemImageSelecterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageSelecterViewController.swift; sourceTree = "<group>"; };
 		F133E58523870211002FE0F7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F133E587238702BA002FE0F7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F13D219B23DED01100391A72 /* DataModelLoves.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModelLoves.xcdatamodel; sourceTree = "<group>"; };
+		F13D219E23DED2D000391A72 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		F1DCB68623843EB500E53C36 /* LoveOrHate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveOrHate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1DCB68923843EB500E53C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1DCB68B23843EB500E53C36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,14 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		F13D219D23DED2BC00391A72 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				F13D219E23DED2D000391A72 /* DataBase.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 		F1DCB67D23843EB400E53C36 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +172,7 @@
 				F1DCB6AA23844EAF00E53C36 /* Constants.swift */,
 				F107742423965BED00D79B8E /* CurrentLoveObject.swift */,
 				F1E514ED23B1BBE500B22CB7 /* EmptyLoveObject.swift */,
+				F13D219A23DED01100391A72 /* DataModelLoves.xcdatamodeld */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -177,6 +190,7 @@
 		F1DCB69F23843F2500E53C36 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F13D219D23DED2BC00391A72 /* DB */,
 				F1165B2D239F4C21005EBCB6 /* Different */,
 				F1165B2C239F4BC6005EBCB6 /* Main */,
 				F1165B2A239F4B77005EBCB6 /* Edit */,
@@ -316,6 +330,8 @@
 				F10F33CD23859E1400B1E7F7 /* LoveChangerViewController.swift in Sources */,
 				F107741E2396202100D79B8E /* EditViewController.swift in Sources */,
 				F10774182395047600D79B8E /* SettingsViewController.swift in Sources */,
+				F13D219C23DED01100391A72 /* DataModelLoves.xcdatamodeld in Sources */,
+				F13D219F23DED2D000391A72 /* DataBase.swift in Sources */,
 				F11F9C2D23ACBFCC00353FDA /* ItemImageSelecterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +530,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F13D219A23DED01100391A72 /* DataModelLoves.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F13D219B23DED01100391A72 /* DataModelLoves.xcdatamodel */,
+			);
+			currentVersion = F13D219B23DED01100391A72 /* DataModelLoves.xcdatamodel */;
+			path = DataModelLoves.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F1DCB67E23843EB400E53C36 /* Project object */;
 }
