@@ -55,11 +55,18 @@ class MainViewController: SwipeTableViewController {
     }    
     
     func showAlertButtonTapped(index: Int) {
-        currentLoveObject.currentLoves = itemsArray[index].loves
-        currentLoveObject.currentHates = itemsArray[index].hates
+        let DB = DataBase.shared.itemsArray[index]
+        
         currentLoveObject.currentIndexPath = index
-        currentLoveObject.currentImage = itemsArray[index].image
-       
+        //static
+//        currentLoveObject.currentLoves = itemsArray[index].loves
+//        currentLoveObject.currentHates = itemsArray[index].hates
+//        currentLoveObject.currentImage = itemsArray[index].image
+//       //DB
+        currentLoveObject.currentLoves = DB.lovesValue
+        currentLoveObject.currentHates = DB.hatesValue
+        currentLoveObject.currentImage = DB.symbolOfLove
+               
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: K.vcLoveChanger) as! LoveChangerViewController
@@ -69,8 +76,12 @@ class MainViewController: SwipeTableViewController {
     }
     
     @IBAction func addNewLove(_ sender: UIBarButtonItem) {
-        let newItem = (name: "Проведите влево для редактирования", image: "arrow.left", loves: 0, hates: 0, font: "Snell Roundhand")
-        itemsArray.append(newItem)
+        
+//        let newItem = (name: "Проведите влево для редактирования", image: "arrow.left", loves: 0, hates: 0, font: "Snell Roundhand")
+        //itemsArray.append(newItem)
+        
+        DataBase.shared.addItem(nameOfLove: "Проведите влево для редактирования", symbolOfLove: "arrow.left", hatesValue: 0, lovesValue: 0)
+        
         tableView.reloadData()
         let numberOfSections = tableView.numberOfSections
         let numberOfRows = tableView.numberOfRows(inSection: numberOfSections-1)
@@ -82,11 +93,22 @@ class MainViewController: SwipeTableViewController {
 
 extension MainViewController: LoveChangerViewControllerDelegate {
     func fetchChangedData(data: CurrentLoveObject) {
-        itemsArray[data.currentIndexPath!].loves = data.currentLoves ?? 0
-        itemsArray[data.currentIndexPath!].hates = data.currentHates ?? 0
-        itemsArray[data.currentIndexPath!].image = data.currentImage ?? "person"
+        
+        //static
+//        itemsArray[data.currentIndexPath!].loves = data.currentLoves ?? 0
+//        itemsArray[data.currentIndexPath!].hates = data.currentHates ?? 0
+//        itemsArray[data.currentIndexPath!].image = data.currentImage ?? "person"
+//
+        //DB
+        let DB = DataBase.shared.itemsArray[data.currentIndexPath!]
+        DB.lovesValue = data.currentLoves ?? 0
+        DB.hatesValue = data.currentHates ?? 0
+        DB.symbolOfLove = data.currentImage ?? "person"
+        DB.nameOfLove = data.currentName ?? "Проведите влево для редактирования"
+        
         
         tableView.reloadData()
+        DataBase.shared.saveData()
     }
     }
 

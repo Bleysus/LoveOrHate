@@ -12,7 +12,7 @@ struct CurrentLoveObject {
     var currentName: String?
     var currentDescription: String?
     var currentImage: String?
-    var currentLoves: Int?
-    var currentHates: Int?
+    var currentLoves: Int32?
+    var currentHates: Int32?
     var currentIndexPath: Int?    
 }

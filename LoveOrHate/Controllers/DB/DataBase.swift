@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import Foundation
 import CoreData
 
 class DataBase {
@@ -16,7 +15,7 @@ class DataBase {
     private init() {
     }
     
-    var item = [Item]()
+    var itemsArray = [Item]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func saveData() {
@@ -29,15 +28,15 @@ class DataBase {
     
     func loadData(with request: NSFetchRequest<Item> = Item.fetchRequest()) {
         do {
-        item = try context.fetch(request)
+        itemsArray = try context.fetch(request)
         } catch {
             print("error reading data \(error)")
         }
     }
 
     func deleteData(at indexPath: IndexPath) {
-        context.delete(item[indexPath.row])
-        item.remove(at: indexPath.row)
+        context.delete(itemsArray[indexPath.row])
+        itemsArray.remove(at: indexPath.row)
         saveData()
     }
 
@@ -49,7 +48,7 @@ class DataBase {
         newItem.hatesValue = hatesValue
         newItem.lovesValue = lovesValue
         
-        self.item.append(newItem)
+        self.itemsArray.append(newItem)
         
         self.saveData()
     }

@@ -154,8 +154,8 @@ class EditViewController: UIViewController {
     }
     
     @IBAction func CloseButtonPressed(_ sender: UIButton) {
-        currentLoveObject.currentHates = Int(hatesLabel.text ?? "1")
-        currentLoveObject.currentLoves = Int(lovesLabel.text ?? "1")
+        currentLoveObject.currentHates = Int32(hatesLabel.text ?? "1")
+        currentLoveObject.currentLoves = Int32(lovesLabel.text ?? "1")
         
         if (editLoveTextField.text != "") {
             currentLoveObject.currentName = editLoveTextField.text
