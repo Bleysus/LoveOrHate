@@ -50,9 +50,6 @@ class SettingsViewController: UIViewController {
         
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-        
-        
-        
     }
     
     
