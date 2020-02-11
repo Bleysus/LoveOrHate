@@ -15,7 +15,7 @@ class DataBase {
     private init() {
     }
     
-    var itemsArray = [Item]()
+    var itemsArray = [Item]()   
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func saveData() {

@@ -16,35 +16,46 @@ class MainViewController: SwipeTableViewController {
     
     @IBOutlet var loveTableView: UITableView!
     
-    private func setTheme() {
-        //Set Colors
-        view.backgroundColor = .systemBackground
-        
-        //-----
-    }
+//    private func setTheme() {
+//        //Set Colors
+//        view.backgroundColor = .systemBackground
+//
+//        //-----
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTheme()
+        //setTheme()
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
+        let color = UIColor.gray
+        var contrastColor = UIColor.white
+        
         
         switch K.isDarkTheme {
         case true:
             loveTableView.backgroundImage = UIImage(named: "Wallpaper-Dark")
-            //UINavigationBar.appearance().tintColor = .white
-            UINavigationBar.appearance().backgroundColor = .white
-           
+            contrastColor = UIColor.white
             
         case false:
             loveTableView.backgroundImage = UIImage(named: "Wallpaper-Light")
-            //UINavigationBar.appearance().tintColor = .black
-            UINavigationBar.appearance().backgroundColor = .black
+            contrastColor = UIColor.black
+
         }
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.titleTextAttributes = [.foregroundColor: contrastColor]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: contrastColor]
+        navigationController?.navigationBar.tintColor = contrastColor
+        navBarAppearance.backgroundColor = color
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
     }
     
     // MARK: - Table view data source
@@ -58,11 +69,6 @@ class MainViewController: SwipeTableViewController {
         let DB = DataBase.shared.itemsArray[index]
         
         currentLoveObject.currentIndexPath = index
-        //static
-//        currentLoveObject.currentLoves = itemsArray[index].loves
-//        currentLoveObject.currentHates = itemsArray[index].hates
-//        currentLoveObject.currentImage = itemsArray[index].image
-//       //DB
         currentLoveObject.currentLoves = DB.lovesValue
         currentLoveObject.currentHates = DB.hatesValue
         currentLoveObject.currentImage = DB.symbolOfLove
@@ -76,10 +82,6 @@ class MainViewController: SwipeTableViewController {
     }
     
     @IBAction func addNewLove(_ sender: UIBarButtonItem) {
-        
-//        let newItem = (name: "Проведите влево для редактирования", image: "arrow.left", loves: 0, hates: 0, font: "Snell Roundhand")
-        //itemsArray.append(newItem)
-        
         DataBase.shared.addItem(nameOfLove: "Проведите влево для редактирования", symbolOfLove: "arrow.left", hatesValue: 0, lovesValue: 0)
         
         tableView.reloadData()
@@ -93,13 +95,6 @@ class MainViewController: SwipeTableViewController {
 
 extension MainViewController: LoveChangerViewControllerDelegate {
     func fetchChangedData(data: CurrentLoveObject) {
-        
-        //static
-//        itemsArray[data.currentIndexPath!].loves = data.currentLoves ?? 0
-//        itemsArray[data.currentIndexPath!].hates = data.currentHates ?? 0
-//        itemsArray[data.currentIndexPath!].image = data.currentImage ?? "person"
-//
-        //DB
         let DB = DataBase.shared.itemsArray[data.currentIndexPath!]
         DB.lovesValue = data.currentLoves ?? 0
         DB.hatesValue = data.currentHates ?? 0
@@ -123,21 +118,21 @@ extension UITableView {
     }
 }
 
-extension UINavigationBar {
-    class func setupAppearance() {
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        if #available(iOS 13.0, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.backgroundColor = .black
-            appearance.titleTextAttributes = textAttributes
-            appearance.largeTitleTextAttributes = textAttributes
-            
-            //self.appearance().standartAppearance = appearance
-            
-            
-        } else {
-            
-            
-        }
-    }
-}
+//extension UINavigationBar {
+//    class func setupAppearance() {
+//        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+//        if #available(iOS 13.0, *) {
+//            let appearance = UINavigationBarAppearance()
+//            appearance.backgroundColor = .black
+//            appearance.titleTextAttributes = textAttributes
+//            appearance.largeTitleTextAttributes = textAttributes
+//
+//            //self.appearance().standartAppearance = appearance
+//
+//
+//        } else {
+//
+//
+//        }
+//    }
+//}

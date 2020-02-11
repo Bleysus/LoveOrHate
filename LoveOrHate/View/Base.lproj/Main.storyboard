@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oul-CQ-ujK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oul-CQ-ujK">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -205,10 +205,10 @@
             </objects>
             <point key="canvasLocation" x="1432.5" y="-1526.4084507042253"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="O3x-CO-fm6">
             <objects>
-                <viewController id="Ytl-4M-ZhS" customClass="SettingsViewController" customModule="LoveOrHate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings" id="Ytl-4M-ZhS" userLabel="Settings" customClass="SettingsViewController" customModule="LoveOrHate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="87w-kj-F0Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,7 +223,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WeI-17-Nqz" userLabel="Stack View Switch 1">
                                         <rect key="frame" x="0.0" y="0.0" width="268" height="31"/>
                                         <subviews>
-                                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8li-Rq-CUN">
+                                            <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8li-Rq-CUN">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автозакрытие окна любви" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZXn-qo-Mop">
@@ -276,6 +276,7 @@
                                                 <state key="normal" title="Испытываю сложности"/>
                                                 <connections>
                                                     <action selector="feedbackPressed:" destination="Ytl-4M-ZhS" eventType="touchUpInside" id="Dbm-FZ-MUd"/>
+                                                    <segue destination="bfC-uB-qDw" kind="presentation" id="4W2-zm-oNV"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sy-JO-DQX">
@@ -656,6 +657,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adq-Dz-dtr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1430.4347826086957" y="-97.767857142857139"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="g4s-Zk-Vgx">
+            <objects>
+                <viewController storyboardIdentifier="About" id="bfC-uB-qDw" userLabel="About" customClass="AboutViewController" customModule="LoveOrHate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pec-Hm-A0h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wVO-2B-UZJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="qXi-7q-8Q9"/>
+                    <navigationItem key="navigationItem" id="0zn-QL-vif"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74o-nf-PEF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3094" y="-1526"/>
         </scene>
     </scenes>
     <resources>

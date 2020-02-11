@@ -19,6 +19,8 @@ class SettingsViewController: UIViewController {
     
     private func setTheme() {
         
+        let colorMain = UIColor.gray
+        var contrastColor = UIColor.white
                 
         switch K.isDarkTheme {
         case true:
@@ -27,8 +29,7 @@ class SettingsViewController: UIViewController {
                 label.textColor = .white
             }
             textLoveorHate.textColor = .white
-            UINavigationBar.appearance().backgroundColor = .black
-            UINavigationBar.appearance().tintColor = .black
+            contrastColor = UIColor.white
             
         case false:
             viewBack.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
@@ -36,9 +37,22 @@ class SettingsViewController: UIViewController {
                 label.textColor = .black
             }
             textLoveorHate.textColor = .black
-            UINavigationBar.appearance().backgroundColor = .white
-            UINavigationBar.appearance().tintColor = .white
+            contrastColor = UIColor.black
         }
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.titleTextAttributes = [.foregroundColor: contrastColor]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: contrastColor]
+        navigationController?.navigationBar.tintColor = contrastColor
+        
+        navBarAppearance.backgroundColor = colorMain
+        
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+        
+        
     }
     
     
@@ -58,20 +72,20 @@ class SettingsViewController: UIViewController {
     
     
     @objc func switchChanged(settingsSwitch: UISwitch) {
+        let defaults = UserDefaults.standard
+        
         switch settingsSwitch.tag {
         case 1:
             K.isAutoClosingLoveChanger = settingsSwitch.isOn //настройка автозакрытия окна любви
+            defaults.set(settingsSwitch.isOn, forKey: "isAutoClosingLoveChanger")
         case 2:
             K.isDarkTheme = settingsSwitch.isOn // настройка темы
+            defaults.set(settingsSwitch.isOn, forKey: "isDarkTheme")
         default:
             break
         }
         setTheme()
     }
-//    @IBAction func settingsButtonPressed(_ sender: UIBarButtonItem) {
-//        //super.dismiss(animated: true, completion: nil)
-//        self.navigationController?.popToRootViewController(animated: true)
-//    }
     
     @IBAction func feedbackPressed(_ sender: UIButton) {
         switch sender.tag {
@@ -92,7 +106,7 @@ class SettingsViewController: UIViewController {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["bleysus@gmail.com"])
+            mail.setToRecipients(["novitskii.sergei.sergeevich@gmail.com"])
             mail.setSubject("APP: Love or Hate")
             mail.setMessageBody("Привет! \(body)", isHTML: true)
             

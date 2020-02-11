@@ -15,6 +15,7 @@
 		F107742523965BED00D79B8E /* CurrentLoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107742423965BED00D79B8E /* CurrentLoveObject.swift */; };
 		F10774292398B2F000D79B8E /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10774282398B2F000D79B8E /* ColorScheme.swift */; };
 		F10F33CD23859E1400B1E7F7 /* LoveChangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */; };
+		F1132F8223F12B7A00DA2AF7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1132F8123F12B7A00DA2AF7 /* AboutViewController.swift */; };
 		F11F9C2D23ACBFCC00353FDA /* ItemImageSelecterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F9C2C23ACBFCC00353FDA /* ItemImageSelecterViewController.swift */; };
 		F133E58623870211002FE0F7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F133E58523870211002FE0F7 /* Launch Screen.storyboard */; };
 		F133E588238702BA002FE0F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F133E587238702BA002FE0F7 /* Default-568h@2x.png */; };
@@ -42,6 +43,7 @@
 		F107742423965BED00D79B8E /* CurrentLoveObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLoveObject.swift; sourceTree = "<group>"; };
 		F10774282398B2F000D79B8E /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveChangerViewController.swift; sourceTree = "<group>"; };
+		F1132F8123F12B7A00DA2AF7 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F11F9C2C23ACBFCC00353FDA /* ItemImageSelecterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageSelecterViewController.swift; sourceTree = "<group>"; };
 		F133E58523870211002FE0F7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F133E587238702BA002FE0F7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				F1165B2A239F4B77005EBCB6 /* Edit */,
 				F10F33CC23859E1400B1E7F7 /* LoveChangerViewController.swift */,
 				F10774172395047600D79B8E /* SettingsViewController.swift */,
+				F1132F8123F12B7A00DA2AF7 /* AboutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				F1DCB68A23843EB500E53C36 /* AppDelegate.swift in Sources */,
 				F1DCB68C23843EB500E53C36 /* SceneDelegate.swift in Sources */,
 				F1077423239657D800D79B8E /* LaunchViewController.swift in Sources */,
+				F1132F8223F12B7A00DA2AF7 /* AboutViewController.swift in Sources */,
 				F1DCB6A123843F5C00E53C36 /* MainViewController.swift in Sources */,
 				F10F33CD23859E1400B1E7F7 /* LoveChangerViewController.swift in Sources */,
 				F107741E2396202100D79B8E /* EditViewController.swift in Sources */,

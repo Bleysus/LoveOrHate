@@ -13,37 +13,25 @@ class SwipeTableViewController: UITableViewController {
 
     var currentLoveObject = CurrentLoveObject()
     
-//        var itemsArray = [
-//        (name: "Обучение на электрогитаре", image: "guitars", loves: 24, hates: 12, font: "Snell Roundhand"),
-//        (name: "Кодинг под iOS.", image: "command", loves: 15, hates: 4, font: "Snell Roundhand"),
-//        (name: "Игра в Overwatch", image: "gamecontroller", loves: 5, hates: 33, font: "Chalkduster"),
-//        (name: "Работа на ОШЗ", image: "car", loves: 23, hates: 35, font: "Chalkduster")
-//    ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .singleLine
         tableView.register(UINib(nibName: "ItemsTableViewCell", bundle: nil), forCellReuseIdentifier: K.itemsTableViewCellIdentifier)
         
         DataBase.shared.loadData()
+        let defaults = UserDefaults.standard
+        K.isDarkTheme = defaults.bool(forKey: "isDarkTheme")
+        K.isAutoClosingLoveChanger = defaults.bool(forKey: "isAutoClosingLoveChanger")
     }
-    
-    //Table View Datasource methods
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //itemsArray.count
         DataBase.shared.itemsArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.itemsTableViewCellIdentifier, for: indexPath) as! ItemsTableViewCell
-        
-        //static
-//        cell.itemTextLabel.text = itemsArray[indexPath.row].name
-//        cell.itemPerson.setBackgroundImage(UIImage(systemName: itemsArray[indexPath.row].image), for: .normal)
-//        cell.itemLoveValueLabel.text = String(itemsArray[indexPath.row].loves)
-//        cell.itemHateValueLabel.text = String(itemsArray[indexPath.row].hates)
-        //DB
+
         let DB = DataBase.shared.itemsArray[indexPath.row]
         
         cell.itemTextLabel.text = DB.nameOfLove
@@ -100,12 +88,7 @@ class SwipeTableViewController: UITableViewController {
         case "Edit":
             //----
             currentLoveObject.currentIndexPath = indexPath.row
-            //static
-//            currentLoveObject.currentLoves = itemsArray[indexPath.row].loves
-//            currentLoveObject.currentHates = itemsArray[indexPath.row].hates
-//            currentLoveObject.currentImage = itemsArray[indexPath.row].image
-//            currentLoveObject.currentName = itemsArray[indexPath.row].name
-            //DB
+
             let DB = DataBase.shared.itemsArray[indexPath.row]
             currentLoveObject.currentLoves = DB.lovesValue
             currentLoveObject.currentHates = DB.hatesValue
@@ -121,7 +104,6 @@ class SwipeTableViewController: UITableViewController {
             
             
         case "Delete":
-            //itemsArray.remove(at: indexPath.row)
             DataBase.shared.deleteData(at: indexPath)
             
         default:
@@ -156,12 +138,7 @@ extension SwipeTableViewController: SwipeTableViewCellDelegate {
 
 extension SwipeTableViewController: EditViewControllerDelegate {
     func fetchEditedData(data: CurrentLoveObject) {
-        //static
-//        itemsArray[data.currentIndexPath!].loves = data.currentLoves ?? 0
-//        itemsArray[data.currentIndexPath!].hates = data.currentHates ?? 0
-//        itemsArray[data.currentIndexPath!].image = data.currentImage ?? "person"
-//        itemsArray[data.currentIndexPath!].name = data.currentName ?? "Проведите влево для редактирования"
-        //DB
+
         let DB = DataBase.shared.itemsArray[data.currentIndexPath!]
         DB.lovesValue = data.currentLoves ?? 0
         DB.hatesValue = data.currentHates ?? 0
