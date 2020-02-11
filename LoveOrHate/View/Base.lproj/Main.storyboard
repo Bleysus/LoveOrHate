@@ -214,11 +214,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="no0-Rf-FfY">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="91" width="320" height="477"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ChX-Hf-14F">
-                                <rect key="frame" x="15" y="59" width="290" height="87"/>
+                                <rect key="frame" x="15" y="106" width="290" height="87"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WeI-17-Nqz" userLabel="Stack View Switch 1">
                                         <rect key="frame" x="0.0" y="0.0" width="268" height="31"/>
@@ -319,6 +319,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="no0-Rf-FfY" firstAttribute="bottom" secondItem="87w-kj-F0Z" secondAttribute="bottom" id="2Kb-cy-dNv"/>
                             <constraint firstItem="ChX-Hf-14F" firstAttribute="leading" secondItem="Rvl-uI-bzb" secondAttribute="leading" constant="15" id="87M-h7-mCg"/>
                             <constraint firstAttribute="trailing" secondItem="3t4-Km-WNc" secondAttribute="trailing" constant="15" id="GWj-Mo-z8j"/>
                             <constraint firstItem="Rvl-uI-bzb" firstAttribute="trailing" secondItem="ChX-Hf-14F" secondAttribute="trailing" constant="15" id="N9y-sa-4dy"/>
@@ -333,7 +334,7 @@
                         <viewLayoutGuide key="safeArea" id="Rvl-uI-bzb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0jO-w3-hxN"/>
-                    <navigationItem key="navigationItem" id="HtH-T9-Pwo"/>
+                    <navigationItem key="navigationItem" title="Настройки" id="HtH-T9-Pwo"/>
                     <connections>
                         <outlet property="autoCloseLoveViewSwitch" destination="8li-Rq-CUN" id="QdS-ov-aEX"/>
                         <outlet property="textLoveorHate" destination="Q91-cx-3hz" id="Pgy-Bd-quN"/>
@@ -400,8 +401,8 @@
             <objects>
                 <navigationController storyboardIdentifier="NavController" title="NavController" automaticallyAdjustsScrollViewInsets="NO" id="NFg-gj-1Rl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lQe-JH-kyt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="lQe-JH-kyt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -673,7 +674,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" allowsEditingTextAttributes="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2A-j8-geo">
-                                <rect key="frame" x="15" y="15" width="290" height="518"/>
+                                <rect key="frame" x="2" y="2" width="316" height="544"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -690,10 +691,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="v2A-j8-geo" firstAttribute="leading" secondItem="wVO-2B-UZJ" secondAttribute="leading" constant="15" id="Reo-8n-eLl"/>
-                            <constraint firstItem="v2A-j8-geo" firstAttribute="top" secondItem="wVO-2B-UZJ" secondAttribute="top" constant="15" id="lYx-ro-rhH"/>
-                            <constraint firstItem="wVO-2B-UZJ" firstAttribute="bottom" secondItem="v2A-j8-geo" secondAttribute="bottom" constant="15" id="oSH-21-pO7"/>
-                            <constraint firstItem="wVO-2B-UZJ" firstAttribute="trailing" secondItem="v2A-j8-geo" secondAttribute="trailing" constant="15" id="uk9-vs-NFd"/>
+                            <constraint firstItem="v2A-j8-geo" firstAttribute="leading" secondItem="wVO-2B-UZJ" secondAttribute="leading" constant="2" id="Reo-8n-eLl"/>
+                            <constraint firstItem="v2A-j8-geo" firstAttribute="top" secondItem="wVO-2B-UZJ" secondAttribute="top" constant="2" id="lYx-ro-rhH"/>
+                            <constraint firstAttribute="bottom" secondItem="v2A-j8-geo" secondAttribute="bottom" constant="2" id="oSH-21-pO7"/>
+                            <constraint firstItem="wVO-2B-UZJ" firstAttribute="trailing" secondItem="v2A-j8-geo" secondAttribute="trailing" constant="2" id="uk9-vs-NFd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wVO-2B-UZJ"/>
                     </view>

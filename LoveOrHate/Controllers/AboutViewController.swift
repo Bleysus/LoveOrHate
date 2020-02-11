@@ -40,23 +40,26 @@ A: Пишите предложения, буду думать. Можно и п�
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        aboutTextView.layer.cornerRadius = 5
         
-switch K.isDarkTheme {
-case true:
-    viewBack.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-    //viewBack.backgroundColor = UIColor.gray
-    aboutTextView.backgroundColor = UIColor.black
-    aboutTextView.textColor = UIColor.white
-    
-case false:
-    viewBack.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-    //viewBack.backgroundColor = UIColor.gray
-    aboutTextView.backgroundColor = UIColor.white
-    aboutTextView.textColor = UIColor.black
-}
+        switch K.isDarkTheme {
+        case true:
+            //    viewBack.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            viewBack.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            //viewBack.backgroundColor = UIColor.gray
+            aboutTextView.backgroundColor = UIColor.black
+            aboutTextView.textColor = UIColor.white
+            
+        case false:
+            viewBack.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            //viewBack.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            //viewBack.backgroundColor = UIColor.gray
+            aboutTextView.backgroundColor = UIColor.white
+            aboutTextView.textColor = UIColor.black
+        }
         
         
-
+        
         aboutTextView.text = aboutText
     }
     
