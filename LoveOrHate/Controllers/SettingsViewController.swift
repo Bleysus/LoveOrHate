@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet var viewBack: UIView!
     @IBOutlet var textSettings: [UILabel]!
     @IBOutlet weak var textLoveorHate: UILabel!
+    @IBOutlet weak var navbar: UINavigationItem!
     
     private func setTheme() {
         
@@ -50,6 +51,8 @@ class SettingsViewController: UIViewController {
         
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        navbar.standardAppearance = navBarAppearance
+        navbar.scrollEdgeAppearance = navBarAppearance
     }
     
     
