@@ -21,7 +21,20 @@ class SwipeTableViewController: UITableViewController {
         DataBase.shared.loadData()
         let defaults = UserDefaults.standard
         K.isDarkTheme = defaults.bool(forKey: "isDarkTheme")
-        K.isAutoClosingLoveChanger = defaults.bool(forKey: "isAutoClosingLoveChanger")
+        K.isNotAutoClosingLoveChanger = defaults.bool(forKey: "isAutoClosingLoveChanger")
+        
+        
+        K.isNotFirstLaunch = defaults.bool(forKey: "isFirstLaunch")
+        
+        
+        if (!K.isNotFirstLaunch) && (DataBase.shared.itemsArray.count == 0) {
+            DataBase.shared.addItem(nameOfLove: "Проведите влево для редактирования", symbolOfLove: "arrow.left", hatesValue: 0, lovesValue: 0)
+            DataBase.shared.addItem(nameOfLove: "Проведите влево для редактирования", symbolOfLove: "arrow.left", hatesValue: 0, lovesValue: 0)
+            DataBase.shared.addItem(nameOfLove: "Проведите влево для редактирования", symbolOfLove: "arrow.left", hatesValue: 0, lovesValue: 0)
+            tableView.reloadData()
+            K.isNotFirstLaunch = true
+            defaults.set(K.isNotFirstLaunch, forKey: "isFirstLaunch")
+        }
     }
 
     

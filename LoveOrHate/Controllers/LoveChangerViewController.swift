@@ -83,7 +83,7 @@ class LoveChangerViewController: UIViewController {
         default: break
         }
         
-        if K.isAutoClosingLoveChanger {
+        if !K.isNotAutoClosingLoveChanger {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                 self.exitLoveChanger()
             })

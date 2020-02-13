@@ -22,6 +22,7 @@ struct K {
     static let vcNavController = "NavController"
     
     static var isDarkTheme = false
-    static var isAutoClosingLoveChanger = true
+    static var isNotAutoClosingLoveChanger = false
+    static var isNotFirstLaunch = false
     
 }

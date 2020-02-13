@@ -61,7 +61,7 @@ class SettingsViewController: UIViewController {
                 
         setTheme()
         
-        autoCloseLoveViewSwitch.isOn = K.isAutoClosingLoveChanger
+        autoCloseLoveViewSwitch.isOn = !K.isNotAutoClosingLoveChanger
         themeSwitch.isOn = K.isDarkTheme
         
         
@@ -76,7 +76,7 @@ class SettingsViewController: UIViewController {
         
         switch settingsSwitch.tag {
         case 1:
-            K.isAutoClosingLoveChanger = settingsSwitch.isOn //настройка автозакрытия окна любви
+            K.isNotAutoClosingLoveChanger = !settingsSwitch.isOn //настройка автозакрытия окна любви
             defaults.set(settingsSwitch.isOn, forKey: "isAutoClosingLoveChanger")
         case 2:
             K.isDarkTheme = settingsSwitch.isOn // настройка темы
