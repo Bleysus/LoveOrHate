@@ -95,8 +95,9 @@ class SettingsViewController: UIViewController {
             sendEmail(body: "Нашел баги в программе: ")
         case 3: //предложения
             sendEmail(body: "Есть предложение новой фичи: ")
-        case 4: //все отлично
-            break
+        case 4: //все отлично            
+            let url = URL(string: "itms-apps://itunes.apple.com/app/id1500536744")!
+            UIApplication.shared.open(url)
         default:
             break
         }

@@ -42,7 +42,7 @@ class ItemsTableViewCell: SwipeTableViewCell {
 
     }
     @IBAction func selectPersonPressed(_ sender: UIButton) {
-        itemTextLabel.text = "Yes!"      
+        //itemTextLabel.text = "Yes!"      
 
         
     }
